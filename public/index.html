@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GOGO FM - La radio qui te parle vraiment !">
+  <title>GOGO FM — La radio qui te parle vraiment !</title>
+  <link rel="icon" type="image/png" href="images/logo_3D.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/base.css" />
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader" style="position:fixed;inset:0;background:var(--black);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;transition:opacity 0.6s ease,visibility 0.6s ease">
+    <div style="font-family:var(--font-display);font-size:60px;background:linear-gradient(135deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:pulse-logo 1.5s ease-in-out infinite"><img src="images/Logo_3D.png" alt="GOgo FM" style="border-radius: 50%; height: 30%; weight:30%; margin-top: 130%;"/></div>
+    <div style="display:flex;gap:5px;align-items:flex-end;height:40px">
+      <div style="width:6px;background:linear-gradient(to top,var(--orange),var(--gold));border-radius:3px;animation:loader-wave 1.2s ease-in-out infinite;height:20px"></div>
+      <div style="width:6px;background:linear-gradient(to top,var(--orange),var(--gold));border-radius:3px;animation:loader-wave 1.2s ease-in-out infinite 3.1s;height:35px"></div>
+      <div style="width:6px;background:linear-gradient(to top,var(--orange),var(--gold));border-radius:3px;animation:loader-wave 1.2s ease-in-out infinite 3.2s;height:25px"></div>
+      <div style="width:6px;background:linear-gradient(to top,var(--orange),var(--gold));border-radius:3px;animation:loader-wave 1.2s ease-in-out infinite 3.3s;height:40px"></div>
+      <div style="width:6px;background:linear-gradient(to top,var(--orange),var(--gold));border-radius:3px;animation:loader-wave 1.2s ease-in-out infinite 3.4s;height:30px"></div>
+      <div style="width:6px;background:linear-gradient(to top,var(--orange),var(--gold));border-radius:3px;animation:loader-wave 1.2s ease-in-out infinite 3.5s;height:20px"></div>
+    </div>
+  </div>
+
+  <!-- PARTICLES -->
+  <canvas id="particles-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0.4"></canvas>
+
+  <!-- NAVBAR -->
+  <div id="navbar-container"></div>
+
+  <!-- HERO -->
+  <section id="hero" style="min-height:100vh;display:flex;align-items:center;overflow:hidden;z-index:1;position:relative">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(255,107,0,0.12) 0%,transparent 60%),radial-gradient(ellipse 60% 50% at 20% 80%,rgba(245,197,24,0.07) 0%,transparent 50%),var(--black)"></div>
+    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,107,0,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,107,0,0.03) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at 50% 50%,black 30%,transparent 75%)"></div>
+
+    <div class="container" style="position:relative;z-index:2">
+      <div style="display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px;padding:100px 0 60px">
+
+        <!-- GAUCHE -->
+        <div>
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px">
+            <div style="display:flex;align-items:center;gap:6px;background:rgba(229,62,62,0.15);border:1px solid rgba(229,62,62,0.4);color:#fc8181;font-family:var(--font-tech);font-size:10px;letter-spacing:2px;font-weight:700;padding:5px 14px;border-radius:50px;animation:pulse-red 2s ease-in-out infinite">
+              <span style="width:8px;height:8px;background:#fc8181;border-radius:50%;animation:blink 1s infinite;display:inline-block"></span>
+              EN DIRECT 24H/24
+            </div>
+            <span style="font-family:var(--font-tech);font-size:11px;color:var(--gray);letter-spacing:1px" id="listener-count">🎧 12 847 auditeurs</span>
+          </div>
+
+          <div style="font-family:var(--font-display);font-size:clamp(72px,10vw,130px);line-height:0.9;letter-spacing:-2px;margin-bottom:8px">
+           <!-- <span style="color:var(--white);display:block"><img src="images/sphere bot.png" alt="sphere bot" style="border-radius:50%"/></span>-->
+
+           <span style="color:var(--white);display:block;cursor:pointer" onclick="toggleAIChat()">
+  <img src="images/sphere bot.png" alt="GoGo Bot"
+    style="
+      width:220px;
+      object-fit:contain;
+      filter:drop-shadow(0 15px 40px rgba(245,197,24,0.6));
+      animation:robot-flotter 4s ease-in-out infinite;
+    "
+  />
+  <div style="
+    width:150px;height:12px;
+    background:radial-gradient(ellipse,rgba(245,197,24,0.3) 0%,transparent 70%);
+    border-radius:50%;
+    margin-top:-8px;
+    animation:robot-ombre 4s ease-in-out infinite;
+  "></div>
+</span>
+
+           <!--<span style="display:block;background:linear-gradient(135deg,var(--gold),var(--orange),#ff2d00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 30px rgba(255,107,0,0.5))">FM</span>-->
+          </div>
+
+          <p style="font-size:20px;color:var(--gray);font-weight:500;letter-spacing:1px;margin:20px 0 36px;font-style:italic">
+            "La radio qui te <em style="color:var(--gold);font-style:normal">parle vraiment</em> !"
+          </p>
+
+          <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:40px">
+            <button onclick="activatePlayer()" style="display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,var(--orange),var(--gold));color:var(--black);padding:16px 32px;border-radius:50px;font-size:16px;font-weight:700;letter-spacing:1px;text-transform:uppercase;box-shadow:0 0 40px rgba(255,107,0,0.5);transition:all 0.3s;border:none;cursor:pointer">
+              ▶ PLAY LIVE
+            </button>
+            <a href="communaute.html" class="btn btn-outline">Rejoindre la communauté</a>
+          </div>
+
+          <!-- STATS -->
+          <div style="display:flex;gap:32px">
+            <div style="text-align:center">
+              <div style="font-family:var(--font-display);font-size:32px;background:linear-gradient(135deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent" id="stat-listeners">12K+</div>
+              <div style="font-size:11px;color:var(--gray);letter-spacing:1px;text-transform:uppercase">Auditeurs</div>
+            </div>
+            <div style="text-align:center">
+              <div style="font-family:var(--font-display);font-size:32px;background:linear-gradient(135deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent">50+</div>
+              <div style="font-size:11px;color:var(--gray);letter-spacing:1px;text-transform:uppercase">Émissions</div>
+            </div>
+            <div style="text-align:center">
+              <div style="font-family:var(--font-display);font-size:32px;background:linear-gradient(135deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent">24/7</div>
+              <div style="font-size:11px;color:var(--gray);letter-spacing:1px;text-transform:uppercase">En direct</div>
+            </div>
+            <div style="text-align:center">
+              <div style="font-family:var(--font-display);font-size:32px;background:linear-gradient(135deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent">200+</div>
+              <div style="font-size:11px;color:var(--gray);letter-spacing:1px;text-transform:uppercase">Podcasts</div>
+            </div>
+          </div>
+        </div>
+
+<!-- DROITE — LOGO + ROBOT -->
+<div style="display:flex;flex-direction:column;align-items:center;gap:30px">
+  <div style="position:relative;width:340px;height:340px;display:flex;align-items:center;justify-content:center">
+    <div style="position:absolute;width:200px;height:200px;border-radius:50%;border:1px solid rgba(255,107,0,0.15);animation:expand-ring 3s ease-in-out infinite"></div>
+    <div style="position:absolute;width:260px;height:260px;border-radius:50%;border:1px solid rgba(255,107,0,0.1);animation:expand-ring 3s ease-in-out infinite 0.8s"></div>
+    <div style="position:absolute;width:320px;height:320px;border-radius:50%;border:1px solid rgba(255,107,0,0.06);animation:expand-ring 3s ease-in-out infinite 1.6s"></div>
+    <img src="images/logo_3D.png" alt="GOGO FM" style="width:160px;border-radius:50%;object-fit:contain;position:relative;z-index:2;filter:drop-shadow(0 0 30px rgba(255,107,0,0.4))" />
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+<!-- ROBOT HERO ANIMÉ -->
+ <!--<div style="position:absolute;left:5%;bottom:90px;z-index:5;cursor:pointer" onclick="toggleAIChat()">
+  <div style="position:relative;width:160px">
+    <!-- Corps robot animé -->
+    <!--<img src="images/gogo_bot.png" alt="GoGo IA"
+      id="robot-hero"
+      style="width:160px;object-fit:contain;
+        animation:robot-hero-float 3s ease-in-out infinite;
+        filter:drop-shadow(0 15px 35px rgba(245,197,24,0.5));
+        transition:all 0.3s"/>-->
+
+    <!-- Bulle de dialogue -->
+    <!--<div id="robot-bubble"
+      style="position:absolute;top:-70px;left:50%;transform:translateX(-10%);
+        background:rgba(10,10,15,0.95);
+        border:1px solid rgba(245,197,24,0.4);
+        border-radius:14px;border-bottom-left-radius:4px;
+        padding:8px 14px;white-space:nowrap;
+        font-family:'Rajdhani',sans-serif;font-size:13px;
+        color:var(--gold);font-weight:600;
+        box-shadow:0 4px 20px rgba(0,0,0,0.4);
+        animation:bubble-appear 0.5s ease;
+        backdrop-filter:blur(10px)">
+      💬 Parle-moi !
+    </div>-->
+
+    <!-- Cercles lumineux sous le robot -->
+   <!-- <div style="position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);
+      width:80px;height:12px;
+      background:radial-gradient(ellipse,rgba(245,197,24,0.4) 0%,transparent 70%);
+      animation:shadow-pulse 3s ease-in-out infinite;
+      border-radius:50%"></div>
+  </div>
+</div>-->
+
+
+
+
+
+    <!-- SCROLL INDICATOR -->
+    <div style="position:absolute;bottom:30px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;animation:bounce-down 2s ease-in-out infinite;color:var(--gray);font-size:11px;letter-spacing:2px">
+      <div style="width:22px;height:36px;border:2px solid rgba(255,255,255,0.2);border-radius:12px;position:relative">
+        <div style="position:absolute;width:4px;height:8px;background:var(--gold);border-radius:2px;top:6px;left:50%;transform:translateX(-50%);animation:scroll-wheel 1.5s ease-in-out infinite"></div>
+      </div>
+      <span>SCROLL</span>
+    </div>
+  </section>
+
+  <!-- RUBRIQUES RAPIDES -->
+  <section style="background:var(--dark);padding:60px 0">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:40px">
+        <div class="section-tag">🎙️ GOGO FM</div>
+        <h2 class="section-title">Explore <span class="gradient-text">GOGO FM</span></h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px">
+
+        <a href="emissions.html" style="background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);padding:28px;text-align:center;transition:all 0.3s;display:block">
+          <div style="font-size:3rem;margin-bottom:12px">📻</div>
+          <div style="font-family:var(--font-display);font-size:22px;margin-bottom:6px">Émissions</div>
+          <div style="font-size:13px;color:var(--gray)">Tous nos programmes</div>
+        </a>
+
+        <a href="enigmes.html" style="background:rgba(245,197,24,0.06);border:1px solid rgba(245,197,24,0.2);border-radius:var(--radius);padding:28px;text-align:center;transition:all 0.3s;display:block">
+          <div style="font-size:3rem;margin-bottom:12px"><img src="images/Lhd.png"/></div>
+          <div style="font-family:var(--font-display);font-size:22px;margin-bottom:6px;color:var(--gold)">LHD</div>
+          <div style="font-size:13px;color:var(--gray)">Maître des Énigmes</div>
+        </a>
+
+        <a href="podcasts.html" style="background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);padding:28px;text-align:center;transition:all 0.3s;display:block">
+          <div style="font-size:3rem;margin-bottom:12px">🎙️</div>
+          <div style="font-family:var(--font-display);font-size:22px;margin-bottom:6px">Podcasts</div>
+          <div style="font-size:13px;color:var(--gray)">200+ épisodes</div>
+        </a>
+
+        <a href="communaute.html" style="background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);padding:28px;text-align:center;transition:all 0.3s;display:block">
+          <div style="font-size:3rem;margin-bottom:12px">👥</div>
+          <div style="font-family:var(--font-display);font-size:22px;margin-bottom:6px">Communauté</div>
+          <div style="font-size:13px;color:var(--gray)">Chat & commentaires</div>
+        </a>
+
+        <a href="don.html" style="background:rgba(255,69,0,0.06);border:1px solid rgba(255,69,0,0.2);border-radius:var(--radius);padding:28px;text-align:center;transition:all 0.3s;display:block">
+          <div style="font-size:3rem;margin-bottom:12px"><img src="images/love.png" style="height:50px"/></div>
+          <div style="font-family:var(--font-display);font-size:22px;margin-bottom:6px;color:#ff6b35">Don</div>
+          <div style="font-size:13px;color:var(--gray)">Soutenir les handicapés</div>
+        </a>
+
+        <a href="boutique.html" style="background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);padding:28px;text-align:center;transition:all 0.3s;display:block">
+          <div style="font-size:3rem;margin-bottom:12px">🛍️</div>
+          <div style="font-family:var(--font-display);font-size:22px;margin-bottom:6px">Boutique</div>
+          <div style="font-size:13px;color:var(--gray)">Merch officiel</div>
+        </a>
+
+        <a href="premium.html" style="background:rgba(245,197,24,0.06);border:1px solid rgba(245,197,24,0.2);border-radius:var(--radius);padding:28px;text-align:center;transition:all 0.3s;display:block">
+          <div style="font-size:3rem;margin-bottom:12px">👑</div>
+          <div style="font-family:var(--font-display);font-size:22px;margin-bottom:6px;color:var(--gold)">Premium</div>
+          <div style="font-size:13px;color:var(--gray)">Sans pub & exclusif</div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:var(--dark2);border-top:1px solid var(--glass-border);padding:40px 0 100px">
+    <div class="container" style="text-align:center">
+      <div style="font-family:var(--font-display);font-size:42px;background:linear-gradient(135deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px">GOGO FM</div>
+      <p style="font-size:16px;color:var(--gray);font-style:italic;margin-bottom:20px">"La radio qui te parle vraiment !"</p>
+      <div style="display:flex;justify-content:center;gap:10px;margin-bottom:20px">
+        <a href="#" style="width:40px;height:40px;border-radius:10px;background:var(--glass);border:1px solid var(--glass-border);display:flex;align-items:center;justify-content:center;font-size:18px;transition:all 0.2s"><img src="images/icons8-tiktok-50.apng.png" alt="" srcset=""></a>
+        <a href="#" style="width:40px;height:40px;border-radius:10px;background:var(--glass);border:1px solid var(--glass-border);display:flex;align-items:center;justify-content:center;font-size:18px;transition:all 0.2s"><img src="images/icons8-instagram-50.apng.png" alt="" srcset=""></a>
+        <a href="#" style="width:40px;height:40px;border-radius:10px;background:var(--glass);border:1px solid var(--glass-border);display:flex;align-items:center;justify-content:center;font-size:18px;transition:all 0.2s"><img src="images/icons8-whatsapp-50.apng.png"/></a>
+        <a href="#" style="width:40px;height:40px;border-radius:10px;background:var(--glass);border:1px solid var(--glass-border);display:flex;align-items:center;justify-content:center;font-size:18px;transition:all 0.2s"><img src="images/icons8-facebook-50.apng.png"/></a>
+      </div>
+      <p style="font-size:13px;color:rgba(255,255,255,0.3)">© 2026 GOGO FM — proprieté du groupe Xpointfusion.org</p>
+    </div>
+  </footer>
+
+  <!-- PLAYER + IA -->
+  <div id="player-container"></div>
+
+  <style>
+    @keyframes loader-wave { 0%,100%{transform:scaleY(0.4)} 50%{transform:scaleY(1)} }
+    @keyframes pulse-logo { 0%,100%{filter:brightness(1)} 50%{filter:brightness(1.4) drop-shadow(0 0 20px rgba(245,197,24,0.8))} }
+    @keyframes expand-ring { 0%{transform:scale(1);opacity:0.5} 50%{opacity:0.1} 100%{transform:scale(1.05);opacity:0.5} }
+    @keyframes scroll-wheel { 0%{top:6px;opacity:1} 100%{top:18px;opacity:0} }
+    @keyframes bounce-down { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
+    a[href]:hover { border-color: rgba(245,197,24,0.4) !important; transform: translateY(-4px); }
+
+    @keyframes robot-flotter {
+  0%   { transform: translateY(0px) translateX(0px); filter: drop-shadow(0 15px 40px rgba(245,197,24,0.6)); }
+  25%  { transform: translateY(-20px) translateX(12px); filter: drop-shadow(0 25px 50px rgba(255,107,0,0.8)); }
+  50%  { transform: translateY(-8px) translateX(0px); filter: drop-shadow(0 20px 45px rgba(245,197,24,0.7)); }
+  75%  { transform: translateY(-22px) translateX(-12px); filter: drop-shadow(0 25px 50px rgba(255,107,0,0.8)); }
+  100% { transform: translateY(0px) translateX(0px); filter: drop-shadow(0 15px 40px rgba(245,197,24,0.6)); }
+}
+@keyframes robot-ombre {
+  0%,100% { opacity:0.4; transform:scaleX(1); }
+  25%,75%  { opacity:0.1; transform:scaleX(0.5); }
+  50%      { opacity:0.3; transform:scaleX(0.8); }
+}
+
+/**@keyframes robot-hero-float {
+  0%   { transform: translateY(0px) rotate(0deg) scale(1); }
+  20%  { transform: translateY(-18px) rotate(3deg) scale(1.02); }
+  40%  { transform: translateY(-10px) rotate(-1deg) scale(1); }
+  60%  { transform: translateY(-20px) rotate(-3deg) scale(1.02); }
+  80%  { transform: translateY(-8px) rotate(2deg) scale(1); }
+  100% { transform: translateY(0px) rotate(0deg) scale(1); }
+}
+@keyframes shadow-pulse {
+  0%,100% { opacity:0.4; transform:translateX(-50%) scaleX(1); }
+  50%      { opacity:0.1; transform:translateX(-50%) scaleX(0.6); }
+}
+@keyframes bubble-appear {
+  from { opacity:0; transform:translateX(-10%) translateY(10px); }
+  to   { opacity:1; transform:translateX(-10%) translateY(0); }
+}**/
+
+
+  </style>
+
+  <script src="assets/navbar.js"></script>
+  <script src="assets/player.js"></script>
+  <script src="assets/ai-chat.js"></script>
+  <script>
+    // LOADER
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const loader = document.getElementById('loader');
+        loader.style.opacity = '0';
+        loader.style.visibility = 'hidden';
+      }, 1800);
+    });
+
+    // NAVBAR
+    loadNavbar('accueil');
+
+    // PLAYER
+    document.addEventListener('DOMContentLoaded', loadPlayer);
+
+    // PARTICLES
+    const canvas = document.getElementById('particles-canvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let W, H;
+    function resizeCanvas() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    class Particle {
+      constructor() { this.reset(); }
+      reset() {
+        this.x = Math.random() * W; this.y = Math.random() * H;
+        this.size = Math.random() * 2 + 0.5;
+        this.speedX = (Math.random() - 0.5) * 0.4;
+        this.speedY = (Math.random() - 0.5) * 0.4;
+        this.alpha = Math.random() * 0.5 + 0.1;
+        this.color = Math.random() > 0.5 ? '#f5c518' : '#ff6b00';
+      }
+      update() {
+        this.x += this.speedX; this.y += this.speedY;
+        if (this.x < 0 || this.x > W || this.y < 0 || this.y > H) this.reset();
+      }
+      draw() {
+        ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color; ctx.globalAlpha = this.alpha; ctx.fill();
+      }
+    }
+    for (let i = 0; i < 80; i++) particles.push(new Particle());
+    function animParticles() {
+      ctx.clearRect(0, 0, W, H);
+      particles.forEach(p => { p.update(); p.draw(); });
+      requestAnimationFrame(animParticles);
+    }
+    animParticles();
+
+    // LISTENERS COUNTER
+    let base = 12847;
+    setInterval(() => {
+      base += Math.floor((Math.random() - 0.4) * 10);
+      base = Math.max(12000, base);
+      document.getElementById('listener-count').textContent = `🎧 ${base.toLocaleString('fr-FR')} auditeurs`;
+    }, 3000);
+  </script>
+
+</body>
+</html>

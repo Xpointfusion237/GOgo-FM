@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Maître des Énigmes — GOGO FM</title>
+  <link rel="icon" type="image/png" href="images/logo_3D.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/base.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div id="navbar-container"></div>
+
+  <!-- HEADER PAGE -->
+  <div class="page-header" style="background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(124,58,237,0.15) 0%,transparent 60%)">
+    <div class="container">
+      <div class="section-tag" style="background:rgba(124,58,237,0.1);border-color:rgba(124,58,237,0.3);color:#a78bfa">🔮 Émission Phare</div>
+      <h1 class="section-title">Le Maître des <span class="gradient-text">Énigmes</span></h1>
+      <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:16px">
+        <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--orange));display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:18px;color:#000;border:2px solid rgba(245,197,24,0.5);box-shadow:0 0 20px rgba(245,197,24,0.3)">LHD</div>
+        <div style="text-align:left">
+          <div style="font-size:16px;font-weight:700">Animé par LHD</div>
+          <div style="font-size:12px;color:var(--orange);letter-spacing:1px;text-transform:uppercase">Animateur Phare GOGO FM</div>
+        </div>
+      </div>
+      <p class="section-sub" style="margin:0 auto">"Saurez-vous défier le maître ?" — Défis mentaux, énigmes, quiz et récompenses jusqu'à 5 000 F !</p>
+    </div>
+  </div>
+
+  <section style="background:var(--dark)">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start">
+
+        <!-- GAUCHE -->
+        <div>
+          <!-- INFOS -->
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px">
+            <div style="display:flex;align-items:center;gap:8px;background:var(--glass);border:1px solid var(--glass-border);padding:8px 16px;border-radius:50px;font-size:13px;font-weight:600"><span>📅</span>Tous les samedis</div>
+            <div style="display:flex;align-items:center;gap:8px;background:var(--glass);border:1px solid var(--glass-border);padding:8px 16px;border-radius:50px;font-size:13px;font-weight:600"><span>🕗</span>20H00 en direct</div>
+            <div style="display:flex;align-items:center;gap:8px;background:var(--glass);border:1px solid var(--glass-border);padding:8px 16px;border-radius:50px;font-size:13px;font-weight:600"><span>🔴</span>Live interactif</div>
+          </div>
+
+          <!-- COUNTDOWN -->
+          <div style="background:var(--glass);border:1px solid rgba(245,197,24,0.2);border-radius:var(--radius);padding:28px;margin-bottom:24px">
+            <div style="font-family:var(--font-tech);font-size:11px;letter-spacing:3px;color:var(--gray);text-transform:uppercase;margin-bottom:16px">⏳ Prochain live dans</div>
+            <div style="display:flex;gap:12px;align-items:center">
+              <div style="text-align:center">
+                <div style="font-family:var(--font-display);font-size:48px;line-height:1;background:linear-gradient(135deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-color:var(--glass);border:1px solid var(--glass-border);padding:8px 16px;border-radius:10px;min-width:70px" id="cd-j">00</div>
+                <div style="font-size:10px;color:var(--gray);letter-spacing:2px;text-transform:uppercase;margin-top:4px">JOURS</div>
+              </div>
+              <div style="font-family:var(--font-display);font-size:36px;color:var(--orange);margin-bottom:20px">:</div>
+              <div style="text-align:center">
+                <div style="font-family:var(--font-display);font-size:48px;line-height:1;background:linear-gradient(135deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-color:var(--glass);border:1px solid var(--glass-border);padding:8px 16px;border-radius:10px;min-width:70px" id="cd-h">00</div>
+                <div style="font-size:10px;color:var(--gray);letter-spacing:2px;text-transform:uppercase;margin-top:4px">HEURES</div>
+              </div>
+              <div style="font-family:var(--font-display);font-size:36px;color:var(--orange);margin-bottom:20px">:</div>
+              <div style="text-align:center">
+                <div style="font-family:var(--font-display);font-size:48px;line-height:1;background:linear-gradient(135deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-color:var(--glass);border:1px solid var(--glass-border);padding:8px 16px;border-radius:10px;min-width:70px" id="cd-m">00</div>
+                <div style="font-size:10px;color:var(--gray);letter-spacing:2px;text-transform:uppercase;margin-top:4px">MIN</div>
+              </div>
+              <div style="font-family:var(--font-display);font-size:36px;color:var(--orange);margin-bottom:20px">:</div>
+              <div style="text-align:center">
+                <div style="font-family:var(--font-display);font-size:48px;line-height:1;background:linear-gradient(135deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-color:var(--glass);border:1px solid var(--glass-border);padding:8px 16px;border-radius:10px;min-width:70px" id="cd-s">00</div>
+                <div style="font-size:10px;color:var(--gray);letter-spacing:2px;text-transform:uppercase;margin-top:4px">SEC</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RÉCOMPENSES -->
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px">
+            <div style="background:linear-gradient(135deg,rgba(245,197,24,0.1),rgba(255,107,0,0.1));border:1px solid rgba(245,197,24,0.25);padding:8px 16px;border-radius:50px;font-size:13px;font-weight:600;color:var(--gold)">🏆 Jusqu'à 5 000 F</div>
+            <div style="background:linear-gradient(135deg,rgba(245,197,24,0.1),rgba(255,107,0,0.1));border:1px solid rgba(245,197,24,0.25);padding:8px 16px;border-radius:50px;font-size:13px;font-weight:600;color:var(--gold)">🎁 Cadeaux</div>
+            <div style="background:linear-gradient(135deg,rgba(245,197,24,0.1),rgba(255,107,0,0.1));border:1px solid rgba(245,197,24,0.25);padding:8px 16px;border-radius:50px;font-size:13px;font-weight:600;color:var(--gold)">🌟 Bonus communauté</div>
+          </div>
+
+          <div style="display:flex;gap:16px;flex-wrap:wrap">
+            <button onclick="activatePlayer()" class="btn btn-primary">🎮 PARTICIPER AU LIVE</button>
+            <button onclick="scrollToEnigme()" class="btn btn-outline">🧩 Tester une énigme</button>
+          </div>
+        </div>
+
+        <!-- DROITE — CLASSEMENT -->
+        <div>
+          <div style="background:var(--glass);border:1px solid rgba(245,197,24,0.2);border-radius:var(--radius);padding:28px;margin-bottom:24px">
+            <div style="font-family:var(--font-display);font-size:24px;margin-bottom:20px">🏆 Classement Top Joueurs</div>
+            <div id="leaderboard" style="display:flex;flex-direction:column;gap:12px">
+              <div style="display:flex;align-items:center;gap:14px;padding:12px;background:rgba(245,197,24,0.08);border:1px solid rgba(245,197,24,0.2);border-radius:10px">
+                <div style="font-family:var(--font-display);font-size:22px;color:var(--gold);width:30px">1</div>
+                <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--gold));display:flex;align-items:center;justify-content:center;font-size:18px;border:2px solid rgba(245,197,24,0.3)">A</div>
+                <div style="flex:1"><div style="font-size:14px;font-weight:700">Aminata D.</div><div style="font-size:12px;color:var(--gray)">247 énigmes résolues</div></div>
+                <div style="color:var(--gold);font-weight:700;font-family:var(--font-tech)">2 840 pts</div>
+              </div>
+              <div style="display:flex;align-items:center;gap:14px;padding:12px;background:var(--glass);border:1px solid var(--glass-border);border-radius:10px">
+                <div style="font-family:var(--font-display);font-size:22px;color:var(--orange);width:30px">2</div>
+                <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--gold));display:flex;align-items:center;justify-content:center;font-size:18px">K</div>
+                <div style="flex:1"><div style="font-size:14px;font-weight:700">Koffi K.</div><div style="font-size:12px;color:var(--gray)">183 énigmes résolues</div></div>
+                <div style="color:var(--gold);font-weight:700;font-family:var(--font-tech)">2 210 pts</div>
+              </div>
+              <div style="display:flex;align-items:center;gap:14px;padding:12px;background:var(--glass);border:1px solid var(--glass-border);border-radius:10px">
+                <div style="font-family:var(--font-display);font-size:22px;color:var(--orange);width:30px">3</div>
+                <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--gold));display:flex;align-items:center;justify-content:center;font-size:18px">M</div>
+                <div style="flex:1"><div style="font-size:14px;font-weight:700">Moussa D.</div><div style="font-size:12px;color:var(--gray)">156 énigmes résolues</div></div>
+                <div style="color:var(--gold);font-weight:700;font-family:var(--font-tech)">1 980 pts</div>
+              </div>
+              <div style="display:flex;align-items:center;gap:14px;padding:12px;background:var(--glass);border:1px solid var(--glass-border);border-radius:10px">
+                <div style="font-family:var(--font-display);font-size:22px;color:var(--orange);width:30px">4</div>
+                <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--gold));display:flex;align-items:center;justify-content:center;font-size:18px">F</div>
+                <div style="flex:1"><div style="font-size:14px;font-weight:700">Fatou B.</div><div style="font-size:12px;color:var(--gray)">134 énigmes résolues</div></div>
+                <div style="color:var(--gold);font-weight:700;font-family:var(--font-tech)">1 750 pts</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION ÉNIGME DU JOUR -->
+      <div id="enigme-section" style="margin-top:48px">
+        <div style="text-align:center;margin-bottom:32px">
+          <div class="section-tag" style="background:rgba(124,58,237,0.1);border-color:rgba(124,58,237,0.3);color:#a78bfa">🧩 Jouer maintenant</div>
+          <h2 class="section-title">Énigme du <span class="gradient-text">Jour</span></h2>
+        </div>
+
+        <div style="max-width:600px;margin:0 auto">
+          <div style="background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.25);border-radius:var(--radius);padding:32px;text-align:center">
+            <div id="enigme-icon" style="font-size:4rem;margin-bottom:16px">🧠</div>
+            <div id="enigme-prize" style="font-family:var(--font-tech);font-size:11px;letter-spacing:2px;color:var(--gold);margin-bottom:16px">🏆 50 CRÉDITS EN JEU</div>
+            <div id="enigme-question" style="font-size:1.1rem;font-weight:700;line-height:1.6;margin-bottom:24px;color:var(--white)">
+              Je suis la capitale politique de la Côte d'Ivoire. Qui suis-je ?
+            </div>
+            <div style="display:flex;gap:10px;margin-bottom:16px">
+              <input type="text" id="enigme-input" placeholder="Ta réponse..."
+                onkeydown="if(event.key==='Enter') checkAnswer()"
+                style="flex:1;background:rgba(255,255,255,0.06);border:1px solid rgba(124,58,237,0.3);border-radius:10px;padding:12px 16px;color:var(--white);font-size:15px;font-family:var(--font-body);outline:none"/>
+              <button onclick="checkAnswer()" style="background:linear-gradient(135deg,#7c3aed,var(--gold));border:none;border-radius:10px;padding:12px 24px;color:#fff;font-weight:700;font-size:14px;cursor:pointer;letter-spacing:1px">
+                Répondre
+              </button>
+            </div>
+            <div id="enigme-result" style="min-height:28px;font-size:14px;font-weight:600"></div>
+            <button onclick="nextEnigme()" style="margin-top:16px;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;padding:8px 20px;color:var(--gray);font-size:13px;cursor:pointer;font-family:var(--font-body)">
+              ⏭ Énigme suivante
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:var(--dark2);border-top:1px solid var(--glass-border);padding:30px 0 100px">
+    <div class="container" style="text-align:center">
+      <p style="font-size:13px;color:rgba(255,255,255,0.3)">© 2026 GOGO FM — Fait avec ❤️ en Côte d'Ivoire</p>
+    </div>
+  </footer>
+
+  <!-- PLAYER + IA -->
+  <div id="player-container"></div>
+
+  <script src="assets/navbar.js"></script>
+  <script src="assets/player.js"></script>
+  <script src="assets/ai-chat.js"></script>
+  <script>
+    loadNavbar('enigmes');
+    document.addEventListener('DOMContentLoaded', loadPlayer);
+
+    // COUNTDOWN
+    function updateCountdown() {
+      const now = new Date();
+      let target = new Date();
+      const day = now.getDay();
+      const daysUntilSat = (6 - day + 7) % 7 || 7;
+      target.setDate(now.getDate() + daysUntilSat);
+      target.setHours(20, 0, 0, 0);
+      if (target <= now) target.setDate(target.getDate() + 7);
+      const diff = target - now;
+      const j = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      document.getElementById('cd-j').textContent = String(j).padStart(2,'0');
+      document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
+      document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
+      document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // ÉNIGMES
+    const ENIGMES = [
+      { icon:'🏛️', question:"Je suis la capitale politique de la Côte d'Ivoire. Qui suis-je ?", answer:"yamoussoukro", prize:"50 CRÉDITS" },
+      { icon:'🎵', question:"Quel artiste ivoirien a popularisé le Coupé-Décalé ?", answer:"douk saga", prize:"75 CRÉDITS" },
+      { icon:'🌍', question:"Combien de pays composent l'Afrique de l'Ouest ?", answer:"15", prize:"60 CRÉDITS" },
+      { icon:'🎤', question:"Quel est le vrai prénom d'Arafat DJ ?", answer:"ange didier", prize:"80 CRÉDITS" },
+      { icon:'🗺️', question:"Dans quel pays se trouve le mont Kilimandjaro ?", answer:"tanzanie", prize:"55 CRÉDITS" },
+      { icon:'🏆', question:"Quelle est la monnaie utilisée en Côte d'Ivoire ?", answer:"franc cfa", prize:"40 CRÉDITS" },
+      { icon:'🎭', question:"Comment s'appelle la danse traditionnelle du peuple Bété en Côte d'Ivoire ?", answer:"gbegbe", prize:"90 CRÉDITS" }
+    ];
+
+    let currentIdx = 0;
+
+    function loadEnigme(idx) {
+      const e = ENIGMES[idx];
+      document.getElementById('enigme-icon').textContent = e.icon;
+      document.getElementById('enigme-question').textContent = e.question;
+      document.getElementById('enigme-prize').textContent = `🏆 ${e.prize} EN JEU`;
+      document.getElementById('enigme-input').value = '';
+      document.getElementById('enigme-result').textContent = '';
+      document.getElementById('enigme-result').style.color = '';
+    }
+
+    function checkAnswer() {
+      const input = document.getElementById('enigme-input');
+      const result = document.getElementById('enigme-result');
+      const answer = input.value.trim().toLowerCase();
+      const correct = ENIGMES[currentIdx].answer.toLowerCase();
+
+      if (!answer) return;
+
+      if (answer === correct || correct.includes(answer) || answer.includes(correct)) {
+        result.style.color = '#32cd32';
+        result.textContent = `🎉 BRAVO ! Bonne réponse ! Tu gagnes ${ENIGMES[currentIdx].prize} !`;
+        setTimeout(nextEnigme, 3000);
+      } else {
+        result.style.color = '#ff4444';
+        result.textContent = '❌ Mauvaise réponse, réessaie !';
+        input.value = '';
+        input.focus();
+      }
+    }
+
+    function nextEnigme() {
+      currentIdx = (currentIdx + 1) % ENIGMES.length;
+      loadEnigme(currentIdx);
+    }
+
+    function scrollToEnigme() {
+      document.getElementById('enigme-section').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    loadEnigme(0);
+  </script>
+
+</body>
+</html>

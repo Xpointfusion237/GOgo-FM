@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Communauté — GOGO FM</title>
+  <link rel="icon" type="image/png" href="images/logo_3D.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/base.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div id="navbar-container"></div>
+
+  <!-- HEADER PAGE -->
+  <div class="page-header">
+    <div class="container">
+      <div class="section-tag">👥 Communauté</div>
+      <h1 class="section-title">Rejoignez la <span class="gradient-text">famille</span></h1>
+      <p class="section-sub" style="margin:0 auto">Des milliers d'auditeurs connectés — commentaires, réactions et interactions live.</p>
+    </div>
+  </div>
+
+  <section style="background:var(--dark)">
+    <div class="container">
+
+      <!-- RÉSEAUX SOCIAUX -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:48px">
+        <a href="#" style="background:linear-gradient(135deg,rgba(0,0,0,0.6),rgba(254,44,85,0.1));border:1px solid rgba(254,44,85,0.2);border-radius:var(--radius);padding:28px 20px;text-align:center;transition:all 0.3s;display:block">
+          <div style="font-size:2.5rem;margin-bottom:50px"><img src="images/icons8-tiktok-50.apng.png" alt="TikTok logo" srcset="" style="border-radius: 50%; margin-bottom: 0px 0px 12px;"></div>
+          <div style="font-family:var(--font-display);font-size:20px;margin-bottom:8px">TikTok</div>
+          <div style="font-size:28px;font-weight:700;color:#fe2c55;margin-bottom:4px">148K</div>
+          <div style="font-size:12px;color:var(--gray);letter-spacing:1px;text-transform:uppercase">Abonnés</div>
+        </a>
+        <a href="#" style="background:linear-gradient(135deg,rgba(0,0,0,0.6),rgba(24,119,242,0.1));border:1px solid rgba(24,119,242,0.2);border-radius:var(--radius);padding:28px 20px;text-align:center;transition:all 0.3s;display:block">
+          <div style="font-size:2.5rem;margin-bottom:14px"><img src="images/icons8-facebook-circled-50.apng.png" alt="Facebook logo" srcset="" style="border-radius: 50%;"></div>
+          <div style="font-family:var(--font-display);font-size:20px;margin-bottom:8px">Facebook</div>
+          <div style="font-size:28px;font-weight:700;color:#1877f2;margin-bottom:4px">89K</div>
+          <div style="font-size:12px;color:var(--gray);letter-spacing:1px;text-transform:uppercase">Fans</div>
+        </a>
+        <a href="#" style="background:linear-gradient(135deg,rgba(0,0,0,0.6),rgba(225,48,108,0.1));border:1px solid rgba(225,48,108,0.2);border-radius:var(--radius);padding:28px 20px;text-align:center;transition:all 0.3s;display:block">
+          <div style="font-size:2.5rem;margin-bottom:14px"><img src="images/icons8-instagram-50.apng.png" alt="instagrame" srcset="" style="border-radius: 50%;"></div>
+          <div style="font-family:var(--font-display);font-size:20px;margin-bottom:8px">Instagram</div>
+          <div style="font-size:28px;font-weight:700;color:#e1306c;margin-bottom:4px">62K</div>
+          <div style="font-size:12px;color:var(--gray);letter-spacing:1px;text-transform:uppercase">Abonnés</div>
+        </a>
+        <a href="#" style="background:linear-gradient(135deg,rgba(0,0,0,0.6),rgba(255,0,0,0.1));border:1px solid rgba(255,0,0,0.2);border-radius:var(--radius);padding:28px 20px;text-align:center;transition:all 0.3s;display:block">
+          <div style="font-size:2.5rem;margin-bottom:12px">▶️</div>
+          <div style="font-family:var(--font-display);font-size:20px;margin-bottom:8px">YouTube</div>
+          <div style="font-size:28px;font-weight:700;color:#ff0000;margin-bottom:4px">34K</div>
+          <div style="font-size:12px;color:var(--gray);letter-spacing:1px;text-transform:uppercase">Abonnés</div>
+        </a>
+      </div>
+
+      <!-- CHAT LIVE -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+
+        <!-- COMMENTAIRES -->
+        <div>
+          <div style="background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);overflow:hidden">
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid var(--glass-border)">
+              <div style="font-family:var(--font-display);font-size:22px">💬 Commentaires Live</div>
+              <span class="badge-live">EN DIRECT</span>
+            </div>
+            <div id="comment-feed" style="display:flex;flex-direction:column;gap:14px;padding:16px;max-height:400px;overflow-y:auto">
+              <div style="display:flex;gap:12px">
+                <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--gold));display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;font-weight:700;font-family:var(--font-display)">A</div>
+                <div style="background:rgba(255,255,255,0.04);border:1px solid var(--glass-border);border-radius:12px;border-top-left-radius:0;padding:10px 14px;flex:1">
+                  <div style="font-size:12px;font-weight:700;color:var(--orange);margin-bottom:4px">Aminata D.</div>
+                  <div style="font-size:14px;line-height:1.5">GOGO FM est la meilleure radio ! LHD est incroyable 🔥</div>
+                  <div style="font-size:11px;color:rgba(255,255,255,0.3);margin-top:4px">Il y a 1 min</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:12px">
+                <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--gold));display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;font-weight:700;font-family:var(--font-display)">K</div>
+                <div style="background:rgba(255,255,255,0.04);border:1px solid var(--glass-border);border-radius:12px;border-top-left-radius:0;padding:10px 14px;flex:1">
+                  <div style="font-size:12px;font-weight:700;color:var(--orange);margin-bottom:4px">Koffi K.</div>
+                  <div style="font-size:14px;line-height:1.5">Le Maître des Énigmes m'a fait réfléchir toute la nuit 😂</div>
+                  <div style="font-size:11px;color:rgba(255,255,255,0.3);margin-top:4px">Il y a 3 min</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:12px">
+                <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--gold));display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;font-weight:700;font-family:var(--font-display)">F</div>
+                <div style="background:rgba(255,255,255,0.04);border:1px solid var(--glass-border);border-radius:12px;border-top-left-radius:0;padding:10px 14px;flex:1">
+                  <div style="font-size:12px;font-weight:700;color:var(--orange);margin-bottom:4px">Fatou B.</div>
+                  <div style="font-size:14px;line-height:1.5">J'écoute GOGO FM tous les matins ! Que du bonheur 🎵</div>
+                  <div style="font-size:11px;color:rgba(255,255,255,0.3);margin-top:4px">Il y a 5 min</div>
+                </div>
+              </div>
+            </div>
+            <div style="padding:14px;border-top:1px solid var(--glass-border);display:flex;gap:10px">
+              <input type="text" id="comment-input" placeholder="Écrire un commentaire..."
+                onkeydown="if(event.key==='Enter') postComment()"
+                style="flex:1;background:rgba(255,255,255,0.04);border:1px solid var(--glass-border);border-radius:10px;padding:10px 14px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none"/>
+              <button onclick="postComment()" class="btn btn-primary" style="padding:10px 18px">Envoyer</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CADEAUX LIVE -->
+        <div>
+          <div style="background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);overflow:hidden;margin-bottom:24px">
+            <div style="padding:18px 20px;border-bottom:1px solid var(--glass-border)">
+              <div style="font-family:var(--font-display);font-size:22px;margin-bottom:4px">🎁 Envoyer un cadeau</div>
+              <div style="font-size:13px;color:var(--gray)">Soutenez vos animateurs en direct</div>
+            </div>
+            <div style="padding:16px">
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px">
+                <div onclick="selectGift(this,'🎤','Micro','150 F')" style="aspect-ratio:1;border-radius:10px;background:var(--glass);border:1px solid var(--glass-border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer;transition:all 0.2s">
+                  <div style="font-size:1.6rem">🎤</div>
+                  <div style="font-size:10px;color:var(--gray)">Micro</div>
+                  <div style="font-size:10px;color:var(--gold);font-weight:700">150 F</div>
+                </div>
+                <div onclick="selectGift(this,'👑','Couronne','500 F')" style="aspect-ratio:1;border-radius:10px;background:var(--glass);border:1px solid var(--glass-border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer;transition:all 0.2s">
+                  <div style="font-size:1.6rem">👑</div>
+                  <div style="font-size:10px;color:var(--gray)">Couronne</div>
+                  <div style="font-size:10px;color:var(--gold);font-weight:700">500 F</div>
+                </div>
+                <div onclick="selectGift(this,'💎','Diamant','1 000 F')" style="aspect-ratio:1;border-radius:10px;background:var(--glass);border:1px solid var(--glass-border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer;transition:all 0.2s">
+                  <div style="font-size:1.6rem">💎</div>
+                  <div style="font-size:10px;color:var(--gray)">Diamant</div>
+                  <div style="font-size:10px;color:var(--gold);font-weight:700">1 000 F</div>
+                </div>
+                <div onclick="selectGift(this,'🔥','Flamme','400 F')" style="aspect-ratio:1;border-radius:10px;background:var(--glass);border:1px solid var(--glass-border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer;transition:all 0.2s">
+                  <div style="font-size:1.6rem">🔥</div>
+                  <div style="font-size:10px;color:var(--gray)">Flamme</div>
+                  <div style="font-size:10px;color:var(--gold);font-weight:700">400 F</div>
+                </div>
+                <div onclick="selectGift(this,'⚡','Éclair','300 F')" style="aspect-ratio:1;border-radius:10px;background:var(--glass);border:1px solid var(--glass-border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer;transition:all 0.2s">
+                  <div style="font-size:1.6rem">⚡</div>
+                  <div style="font-size:10px;color:var(--gray)">Éclair</div>
+                  <div style="font-size:10px;color:var(--gold);font-weight:700">300 F</div>
+                </div>
+                <div onclick="selectGift(this,'🎧','Casque','200 F')" style="aspect-ratio:1;border-radius:10px;background:var(--glass);border:1px solid var(--glass-border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer;transition:all 0.2s">
+                  <div style="font-size:1.6rem">🎧</div>
+                  <div style="font-size:10px;color:var(--gray)">Casque</div>
+                  <div style="font-size:10px;color:var(--gold);font-weight:700">200 F</div>
+                </div>
+                <div onclick="selectGift(this,'🌟','Étoile','600 F')" style="aspect-ratio:1;border-radius:10px;background:var(--glass);border:1px solid var(--glass-border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer;transition:all 0.2s">
+                  <div style="font-size:1.6rem">🌟</div>
+                  <div style="font-size:10px;color:var(--gray)">Étoile</div>
+                  <div style="font-size:10px;color:var(--gold);font-weight:700">600 F</div>
+                </div>
+                <div onclick="selectGift(this,'🧠','Cerveau','750 F')" style="aspect-ratio:1;border-radius:10px;background:var(--glass);border:1px solid var(--glass-border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer;transition:all 0.2s">
+                  <div style="font-size:1.6rem">🧠</div>
+                  <div style="font-size:10px;color:var(--gray)">Cerveau</div>
+                  <div style="font-size:10px;color:var(--gold);font-weight:700">750 F</div>
+                </div>
+              </div>
+              <button onclick="sendGift()" style="width:100%;padding:14px;background:linear-gradient(135deg,var(--orange),var(--gold));border:none;border-radius:10px;color:#000;font-size:15px;font-weight:800;cursor:pointer;letter-spacing:1px;font-family:var(--font-body)">
+                🎁 ENVOYER LE CADEAU
+              </button>
+            </div>
+          </div>
+
+          <!-- NOTIFICATIONS -->
+          <div style="background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);padding:20px">
+            <div style="font-family:var(--font-tech);font-size:11px;letter-spacing:2px;color:var(--gold);margin-bottom:14px">⚡ NOTIFICATIONS EN DIRECT</div>
+            <div id="notif-feed" style="display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.03);border-radius:10px;padding:10px">
+                <span>👤</span>
+                <span style="flex:1;font-size:13px"><strong>Kevin M.</strong> <span style="color:var(--gray)">vient d'envoyer</span></span>
+                <span style="font-size:1.2rem">👑</span>
+                <span style="font-size:11px;color:rgba(255,255,255,0.3)">2s</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.03);border-radius:10px;padding:10px">
+                <span>👤</span>
+                <span style="flex:1;font-size:13px"><strong>Aminata D.</strong> <span style="color:var(--gray)">vient d'envoyer</span></span>
+                <span style="font-size:1.2rem">💎</span>
+                <span style="font-size:11px;color:rgba(255,255,255,0.3)">15s</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:var(--dark2);border-top:1px solid var(--glass-border);padding:30px 0 100px">
+    <div class="container" style="text-align:center">
+      <p style="font-size:13px;color:rgba(255,255,255,0.3)">© 2026 GOGO FM — Fait avec ❤️ en Côte d'Ivoire</p>
+    </div>
+  </footer>
+
+  <!-- POPUP CADEAU -->
+  <div id="gift-popup" style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(0);z-index:9000;background:rgba(10,10,15,0.95);border:1px solid rgba(245,197,24,0.4);border-radius:20px;padding:40px;text-align:center;min-width:300px;backdrop-filter:blur(30px);box-shadow:0 0 60px rgba(245,197,24,0.2);transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1)">
+    <div id="popup-emoji" style="font-size:4rem;margin-bottom:16px">🎁</div>
+    <div id="popup-text" style="font-size:18px;font-weight:700;margin-bottom:8px">Cadeau envoyé !</div>
+    <div id="popup-sub" style="font-size:14px;color:var(--gray)">Merci pour votre soutien !</div>
+    <button onclick="closeGiftPopup()" style="margin-top:20px;padding:8px 24px;border:1px solid var(--glass-border);border-radius:50px;color:var(--gray);font-size:13px;background:var(--glass);cursor:pointer;font-family:var(--font-body)">Fermer ✕</button>
+  </div>
+
+  <!-- PLAYER + IA -->
+  <div id="player-container"></div>
+
+  <script src="assets/navbar.js"></script>
+  <script src="assets/player.js"></script>
+  <script src="assets/ai-chat.js"></script>
+  <script>
+    loadNavbar('communaute');
+    document.addEventListener('DOMContentLoaded', loadPlayer);
+
+    // COMMENTAIRES
+    function postComment() {
+      const input = document.getElementById('comment-input');
+      const text = input.value.trim();
+      if (!text) return;
+      const feed = document.getElementById('comment-feed');
+      const letter = text[0].toUpperCase();
+      const div = document.createElement('div');
+      div.style.cssText = 'display:flex;gap:12px';
+      div.innerHTML = `
+        <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--gold));display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;font-weight:700;font-family:var(--font-display)">${letter}</div>
+        <div style="background:rgba(255,107,0,0.08);border:1px solid rgba(255,107,0,0.2);border-radius:12px;border-top-left-radius:0;padding:10px 14px;flex:1">
+          <div style="font-size:12px;font-weight:700;color:var(--orange);margin-bottom:4px">Vous</div>
+          <div style="font-size:14px;line-height:1.5">${text}</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.3);margin-top:4px">À l'instant</div>
+        </div>
+      `;
+      feed.appendChild(div);
+      feed.scrollTop = feed.scrollHeight;
+      input.value = '';
+
+      // Réponse automatique
+      if (Math.random() < 0.4) {
+        setTimeout(() => {
+          const reps = ['Merci pour ton commentaire ! 🔥','Wôôô ! On t\'entend ! 🎙️','GOGO FM te salue ! ❤️','Continue comme ça, tu es le meilleur ! 🌟'];
+          const rep = reps[Math.floor(Math.random() * reps.length)];
+          const d = document.createElement('div');
+          d.style.cssText = 'display:flex;gap:12px';
+          d.innerHTML = `
+            <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#b400ff,#ff4500);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🤖</div>
+            <div style="background:rgba(180,0,255,0.08);border:1px solid rgba(180,0,255,0.2);border-radius:12px;border-top-left-radius:0;padding:10px 14px;flex:1">
+              <div style="font-size:12px;font-weight:700;color:#cc44ff;margin-bottom:4px">GoGo DJ IA</div>
+              <div style="font-size:14px;line-height:1.5">${rep}</div>
+              <div style="font-size:11px;color:rgba(255,255,255,0.3);margin-top:4px">À l'instant</div>
+            </div>
+          `;
+          feed.appendChild(d);
+          feed.scrollTop = feed.scrollHeight;
+        }, 1500);
+      }
+    }
+
+    // CADEAUX
+    let selectedGift = { emoji:'🎁', name:'Cadeau', price:'0 F' };
+
+    function selectGift(el, emoji, name, price) {
+      document.querySelectorAll('[onclick^="selectGift"]').forEach(g => {
+        g.style.borderColor = 'var(--glass-border)';
+        g.style.background = 'var(--glass)';
+      });
+      el.style.borderColor = 'rgba(245,197,24,0.5)';
+      el.style.background = 'rgba(245,197,24,0.1)';
+      selectedGift = { emoji, name, price };
+    }
+
+    function sendGift() {
+      const popup = document.getElementById('gift-popup');
+      document.getElementById('popup-emoji').textContent = selectedGift.emoji;
+      document.getElementById('popup-text').textContent = `${selectedGift.emoji} ${selectedGift.name} envoyé !`;
+      document.getElementById('popup-sub').textContent = `Merci pour votre soutien ! (${selectedGift.price})`;
+      popup.style.transform = 'translate(-50%,-50%) scale(1)';
+      setTimeout(closeGiftPopup, 3000);
+
+      // Ajouter notif
+      const feed = document.getElementById('notif-feed');
+      const item = document.createElement('div');
+      item.style.cssText = 'display:flex;align-items:center;gap:12px;background:rgba(255,215,0,0.06);border:1px solid rgba(255,215,0,0.15);border-radius:10px;padding:10px';
+      item.innerHTML = `
+        <span>👤</span>
+        <span style="flex:1;font-size:13px"><strong>Vous</strong> <span style="color:var(--gray)">venez d'envoyer</span></span>
+        <span style="font-size:1.2rem">${selectedGift.emoji}</span>
+        <span style="font-size:11px;color:rgba(255,255,255,0.3)">maintenant</span>
+      `;
+      feed.prepend(item);
+      if (feed.children.length > 5) feed.removeChild(feed.lastChild);
+    }
+
+    function closeGiftPopup() {
+      document.getElementById('gift-popup').style.transform = 'translate(-50%,-50%) scale(0)';
+    }
+
+    // SIMULATION COMMENTAIRES
+    const fakeUsers = ['Kouassi_237','Aminata🌸','BlackStar_CI','Fatou_Dakar','Yao_Abidjan'];
+    const fakeMsgs = ['GOGO FM c\'est trop 🔥','Wôôô on est là !','Bonne ambiance !','Je suis depuis le Cameroun 🇨🇲','On adore GoGo !'];
+    setInterval(() => {
+      const feed = document.getElementById('comment-feed');
+      const user = fakeUsers[Math.floor(Math.random()*fakeUsers.length)];
+      const msg = fakeMsgs[Math.floor(Math.random()*fakeMsgs.length)];
+      const letter = user[0].toUpperCase();
+      const d = document.createElement('div');
+      d.style.cssText = 'display:flex;gap:12px';
+      d.innerHTML = `
+        <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--gold));display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;font-weight:700;font-family:var(--font-display)">${letter}</div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid var(--glass-border);border-radius:12px;border-top-left-radius:0;padding:10px 14px;flex:1">
+          <div style="font-size:12px;font-weight:700;color:var(--orange);margin-bottom:4px">${user}</div>
+          <div style="font-size:14px;line-height:1.5">${msg}</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.3);margin-top:4px">À l'instant</div>
+        </div>
+      `;
+      feed.appendChild(d);
+      feed.scrollTop = feed.scrollHeight;
+      if (feed.children.length > 20) feed.removeChild(feed.firstChild);
+    }, 8000);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page introuvable | GOGO FM</title>
+  <link rel="icon" type="image/png" href="images/logo_3D.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/base.css" />
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: var(--black);
+      overflow: hidden;
+    }
+    .particles-404 {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .content-404 {
+      position: relative;
+      z-index: 2;
+      padding: 24px;
+    }
+    .num-404 {
+      font-family: var(--font-display);
+      font-size: clamp(120px, 20vw, 220px);
+      line-height: 0.9;
+      background: linear-gradient(135deg, var(--gold), var(--orange), #ff2d00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 40px rgba(255,107,0,0.5));
+      animation: pulse-404 2s ease-in-out infinite;
+      margin-bottom: 0;
+    }
+    @keyframes pulse-404 {
+      0%,100% { filter: drop-shadow(0 0 40px rgba(255,107,0,0.5)); }
+      50%      { filter: drop-shadow(0 0 80px rgba(245,197,24,0.8)); }
+    }
+    .robot-404 {
+      width: 180px;
+      object-fit: contain;
+      animation: robot-404-float 3s ease-in-out infinite;
+      filter: drop-shadow(0 15px 35px rgba(245,197,24,0.5));
+      margin: 20px auto;
+      display: block;
+      cursor: pointer;
+    }
+    @keyframes robot-404-float {
+      0%,100% { transform: translateY(0px) translateX(0px); }
+      25%      { transform: translateY(-18px) translateX(10px); }
+      50%      { transform: translateY(-8px) translateX(0px); }
+      75%      { transform: translateY(-20px) translateX(-10px); }
+    }
+    .ombre-404 {
+      width: 120px; height: 12px;
+      background: radial-gradient(ellipse, rgba(245,197,24,0.3) 0%, transparent 70%);
+      border-radius: 50%;
+      margin: -8px auto 24px;
+      animation: ombre-404 3s ease-in-out infinite;
+    }
+    @keyframes ombre-404 {
+      0%,100% { opacity:0.4; transform:scaleX(1); }
+      25%,75%  { opacity:0.1; transform:scaleX(0.5); }
+      50%      { opacity:0.3; transform:scaleX(0.8); }
+    }
+    .msg-404 {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 4vw, 42px);
+      margin-bottom: 12px;
+      color: var(--white);
+    }
+    .sub-404 {
+      font-size: 16px;
+      color: var(--gray);
+      margin-bottom: 36px;
+      max-width: 440px;
+      line-height: 1.6;
+    }
+    .sub-404 em {
+      color: var(--gold);
+      font-style: normal;
+    }
+    .btns-404 {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .gogo-tag-404 {
+      font-family: var(--font-tech);
+      font-size: 11px;
+      color: rgba(255,255,255,0.2);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PARTICLES -->
+  <canvas class="particles-404" id="particles-canvas"></canvas>
+
+  <!-- NAVBAR -->
+  <div id="navbar-container"></div>
+
+  <!-- CONTENU 404 -->
+  <div class="content-404">
+
+    <div class="num-404">404</div>
+
+    <img src="images/sphere bot.png" alt="GoGo Bot"
+      class="robot-404"
+      onclick="window.location='index.html'"
+      title="Retour à l'accueil"/>
+
+    <div class="ombre-404"></div>
+
+    <div class="msg-404">Wôôô ! Page introuvable !</div>
+
+    <p class="sub-404">
+      GoGo cherche partout mais cette page n'existe pas...<br>
+      Peut-être qu'elle écoute <em>GOGO FM</em> ailleurs ? 🎙️
+    </p>
+
+    <div class="btns-404">
+      <a href="index.html" class="btn btn-primary">
+        🏠 Retour à l'accueil
+      </a>
+      <a href="emissions.html" class="btn btn-outline">
+        📻 Voir les émissions
+      </a>
+      <button onclick="activatePlayer()" class="btn btn-outline"
+        style="border-color:rgba(229,62,62,0.4);color:#fc8181">
+        ▶ Écouter en direct
+      </button>
+    </div>
+
+    <div class="gogo-tag-404">GOGO FM — La radio qui te parle vraiment</div>
+
+  </div>
+
+  <!-- PLAYER + IA -->
+  <div id="player-container"></div>
+
+  <script src="assets/navbar.js"></script>
+  <script src="assets/player.js"></script>
+  <script src="assets/ai-chat.js"></script>
+  <script>
+    loadNavbar('');
+    document.addEventListener('DOMContentLoaded', loadPlayer);
+
+    // PARTICLES
+    const canvas = document.getElementById('particles-canvas');
+    const ctx = canvas.getContext('2d');
+    let W, H;
+    function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+    resize();
+    window.addEventListener('resize', resize);
+    const particles = [];
+    class P {
+      constructor() { this.reset(); }
+      reset() {
+        this.x = Math.random() * W;
+        this.y = Math.random() * H;
+        this.size = Math.random() * 2 + 0.5;
+        this.sx = (Math.random() - 0.5) * 0.4;
+        this.sy = (Math.random() - 0.5) * 0.4;
+        this.alpha = Math.random() * 0.5 + 0.1;
+        this.color = Math.random() > 0.5 ? '#f5c518' : '#ff6b00';
+      }
+      update() {
+        this.x += this.sx; this.y += this.sy;
+        if (this.x < 0 || this.x > W || this.y < 0 || this.y > H) this.reset();
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.globalAlpha = this.alpha;
+        ctx.fill();
+      }
+    }
+    for (let i = 0; i < 80; i++) particles.push(new P());
+    function anim() {
+      ctx.clearRect(0, 0, W, H);
+      particles.forEach(p => { p.update(); p.draw(); });
+      requestAnimationFrame(anim);
+    }
+    anim();
+
+    // Countdown retour auto
+    let count = 30;
+    const sub = document.querySelector('.sub-404');
+    const timer = setInterval(() => {
+      count--;
+      if (count <= 0) {
+        clearInterval(timer);
+        window.location.href = 'index.html';
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>

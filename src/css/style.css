@@ -1,0 +1,421 @@
+/* ─── VARIABLES ─────────────────────────────────────────────── */
+:root {
+  --orange: #ff4500;
+  --gold: #ffd700;
+  --dark: #0a0a0f;
+  --dark2: #12121a;
+  --dark3: #1a1a2e;
+  --border: rgba(255,255,255,0.08);
+  --text: #ffffff;
+  --text-muted: #888888;
+}
+
+/* ─── BASE ───────────────────────────────────────────────────── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--dark);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+}
+
+/* ─── HEADER ─────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 70px;
+  background: rgba(10,10,15,0.98);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  height: 50px;
+  object-fit: contain;
+  border-radius: 50px;
+  animation: pulse 2s infinite;
+}
+
+.live-badge {
+  background: rgba(255,69,0,0.15);
+  border: 1px solid rgba(255,69,0,0.5);
+  color: #ff4500;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.listeners {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.btn-vip {
+  background: linear-gradient(135deg, #ff4500, #ffd700);
+  border: none;
+  color: #000;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* ─── HERO ───────────────────────────────────────────────────── */
+.hero {
+  background: linear-gradient(135deg, rgba(255,69,0,0.12), rgba(255,215,0,0.06));
+  border-bottom: 1px solid var(--border);
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ff4500, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+}
+
+.hero-sub {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* ─── PLAYER ─────────────────────────────────────────────────── */
+.player-section {
+  padding: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.player-card {
+  background: var(--dark2);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.player-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.player-icon {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, #ff4500, #ffd700);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.player-title {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.player-sub {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-play {
+  background: linear-gradient(135deg, #ff4500, #ff8c00);
+  border: none;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: transform 0.2s;
+}
+
+.btn-play:hover { transform: scale(1.05); }
+.btn-play.playing {
+  background: rgba(255,69,0,0.2);
+  border: 2px solid #ff4500;
+  color: #ff4500;
+}
+
+.volume-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.volume-wrap input {
+  width: 100px;
+  accent-color: #ff4500;
+  cursor: pointer;
+}
+
+/* ─── MESSAGE IA ─────────────────────────────────────────────── */
+.ai-message {
+  margin-top: 16px;
+  background: rgba(180,0,255,0.08);
+  border: 1px solid rgba(180,0,255,0.3);
+  border-radius: 12px;
+  padding: 14px 20px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.ai-label {
+  color: #cc44ff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.ai-text {
+  color: #ddd;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* ─── MAIN SECTION ───────────────────────────────────────────── */
+.main-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 0 24px 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ─── CHAT ───────────────────────────────────────────────────── */
+.chat-box, .enigma-box {
+  background: var(--dark2);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 380px;
+}
+
+.box-title {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chat-messages::-webkit-scrollbar { width: 3px; }
+.chat-messages::-webkit-scrollbar-thumb { background: var(--orange); }
+
+.chat-empty {
+  color: #444;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85rem;
+}
+
+.chat-msg {
+  background: rgba(255,255,255,0.04);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.82rem;
+}
+
+.chat-msg .username {
+  color: #ff8c00;
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+.chat-msg .time {
+  color: #444;
+  font-size: 0.7rem;
+  margin-left: 6px;
+}
+
+.chat-msg .text {
+  color: #ccc;
+  margin-top: 2px;
+}
+
+.chat-input-wrap, .enigma-input-wrap {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.chat-input-wrap input, .enigma-input-wrap input {
+  flex: 1;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #fff;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.chat-input-wrap input:focus, .enigma-input-wrap input:focus {
+  border-color: rgba(255,69,0,0.5);
+}
+
+.chat-input-wrap button, .enigma-input-wrap button {
+  background: var(--orange);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* ─── ENIGME ─────────────────────────────────────────────────── */
+.enigma-prize {
+  padding: 10px 18px;
+  color: #ffd700;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.enigma-question {
+  flex: 1;
+  padding: 0 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #eee;
+}
+
+.enigma-result {
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  min-height: 30px;
+}
+
+/* ─── BOUTIQUE ───────────────────────────────────────────────── */
+.shop-section {
+  padding: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #ffd700;
+  letter-spacing: 1px;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.shop-card {
+  background: var(--dark2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.shop-card:hover {
+  border-color: rgba(255,69,0,0.5);
+  transform: translateY(-4px);
+}
+
+.shop-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.shop-card-info {
+  padding: 12px;
+}
+
+.shop-card-name {
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+
+.shop-card-price {
+  color: #ffd700;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────────── */
+.footer {
+  text-align: center;
+  padding: 24px;
+  color: #333;
+  font-size: 0.8rem;
+  border-top: 1px solid var(--border);
+  margin-top: 24px;
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .main-section {
+    grid-template-columns: 1fr;
+  }
+  .hero-title { font-size: 1.5rem; }
+  .player-card { flex-direction: column; align-items: flex-start; }
+}

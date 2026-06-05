@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutique — GOGO FM</title>
+  <link rel="icon" type="image/png" href="images/logo_3D.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/base.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div id="navbar-container"></div>
+
+  <!-- HEADER PAGE -->
+  <div class="page-header">
+    <div class="container">
+      <div class="section-tag">🛍️ Boutique Officielle</div>
+      <h1 class="section-title">Merch <span class="gradient-text">GOGO FM</span></h1>
+      <p class="section-sub" style="margin:0 auto">Portez les couleurs de GOGO FM. Articles officiels de qualité pour les vrais fans.</p>
+    </div>
+  </div>
+
+  <!-- BOUTIQUE -->
+  <section style="background:var(--dark2)">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px">
+
+        <!-- Polo Noir -->
+        <div class="glass-card" style="overflow:hidden">
+          <div style="height:220px;overflow:hidden;position:relative">
+            <div style="position:absolute;top:12px;left:12px;background:var(--orange);color:#000;font-size:10px;font-weight:700;padding:3px 10px;border-radius:50px;z-index:1">NOUVEAU</div>
+            <img src="images/polo-noir.png" alt="Polo Noir" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
+          </div>
+          <div style="padding:20px">
+            <div style="font-size:11px;color:var(--orange);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px">Vêtement</div>
+            <div style="font-family:var(--font-display);font-size:22px;margin-bottom:8px">Polo Noir GOGO FM</div>
+            <div style="font-size:13px;color:var(--gray);margin-bottom:16px">100% coton premium — Disponible en S, M, L, XL, XXL</div>
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div style="font-family:var(--font-display);font-size:28px;color:var(--gold)">5 000 F</div>
+              <button onclick="commander('Polo Noir GOGO FM','5 000 FCFA')" style="background:linear-gradient(135deg,var(--orange),var(--gold));border:none;border-radius:8px;padding:10px 20px;color:#000;font-weight:700;font-size:13px;cursor:pointer;letter-spacing:1px">+ COMMANDER</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Polo Jaune -->
+        <div class="glass-card" style="overflow:hidden">
+          <div style="height:220px;overflow:hidden;position:relative">
+            <div style="position:absolute;top:12px;left:12px;background:var(--gold);color:#000;font-size:10px;font-weight:700;padding:3px 10px;border-radius:50px;z-index:1">BESTSELLER</div>
+            <img src="images/polo-jaune.png" alt="Polo Jaune" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
+          </div>
+          <div style="padding:20px">
+            <div style="font-size:11px;color:var(--orange);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px">Vêtement</div>
+            <div style="font-family:var(--font-display);font-size:22px;margin-bottom:8px">Polo Jaune GOGO FM</div>
+            <div style="font-size:13px;color:var(--gray);margin-bottom:16px">100% coton premium — Disponible en S, M, L, XL, XXL</div>
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div style="font-family:var(--font-display);font-size:28px;color:var(--gold)">5 000 F</div>
+              <button onclick="commander('Polo Jaune GOGO FM','5 000 FCFA')" style="background:linear-gradient(135deg,var(--orange),var(--gold));border:none;border-radius:8px;padding:10px 20px;color:#000;font-weight:700;font-size:13px;cursor:pointer;letter-spacing:1px">+ COMMANDER</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Casquette -->
+        <div class="glass-card" style="overflow:hidden">
+          <div style="height:220px;overflow:hidden">
+            <img src="images/casquette.png" alt="Casquette" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
+          </div>
+          <div style="padding:20px">
+            <div style="font-size:11px;color:var(--orange);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px">Accessoire</div>
+            <div style="font-family:var(--font-display);font-size:22px;margin-bottom:8px">Casquette GOGO FM</div>
+            <div style="font-size:13px;color:var(--gray);margin-bottom:16px">Taille unique réglable — Logo brodé</div>
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div style="font-family:var(--font-display);font-size:28px;color:var(--gold)">3 500 F</div>
+              <button onclick="commander('Casquette GOGO FM','3 500 FCFA')" style="background:linear-gradient(135deg,var(--orange),var(--gold));border:none;border-radius:8px;padding:10px 20px;color:#000;font-weight:700;font-size:13px;cursor:pointer;letter-spacing:1px">+ COMMANDER</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Parapluie -->
+        <div class="glass-card" style="overflow:hidden">
+          <div style="height:220px;overflow:hidden">
+            <img src="images/parapluie.png" alt="Parapluie" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
+          </div>
+          <div style="padding:20px">
+            <div style="font-size:11px;color:var(--orange);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px">Accessoire</div>
+            <div style="font-family:var(--font-display);font-size:22px;margin-bottom:8px">Parapluie GOGO FM</div>
+            <div style="font-size:13px;color:var(--gray);margin-bottom:16px">Anti-UV et imperméable — Logo imprimé</div>
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div style="font-family:var(--font-display);font-size:28px;color:var(--gold)">4 500 F</div>
+              <button onclick="commander('Parapluie GOGO FM','4 500 FCFA')" style="background:linear-gradient(135deg,var(--orange),var(--gold));border:none;border-radius:8px;padding:10px 20px;color:#000;font-weight:700;font-size:13px;cursor:pointer;letter-spacing:1px">+ COMMANDER</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Porte-clé -->
+        <div class="glass-card" style="overflow:hidden">
+          <div style="height:220px;overflow:hidden">
+            <img src="images/porte-clef.png" alt="Porte-clé" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
+          </div>
+          <div style="padding:20px">
+            <div style="font-size:11px;color:var(--orange);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px">Gadget</div>
+            <div style="font-family:var(--font-display);font-size:22px;margin-bottom:8px">Porte-clé GOGO FM</div>
+            <div style="font-size:13px;color:var(--gray);margin-bottom:16px">Métal premium — Logo gravé</div>
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div style="font-family:var(--font-display);font-size:28px;color:var(--gold)">1 500 F</div>
+              <button onclick="commander('Porte-clé GOGO FM','1 500 FCFA')" style="background:linear-gradient(135deg,var(--orange),var(--gold));border:none;border-radius:8px;padding:10px 20px;color:#000;font-weight:700;font-size:13px;cursor:pointer;letter-spacing:1px">+ COMMANDER</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Switch -->
+        <div class="glass-card" style="overflow:hidden">
+          <div style="height:220px;overflow:hidden">
+            <img src="images/switch.png" alt="Switch" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
+          </div>
+          <div style="padding:20px">
+            <div style="font-size:11px;color:var(--orange);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px">Gadget</div>
+            <div style="font-family:var(--font-display);font-size:22px;margin-bottom:8px">Switch GOGO FM</div>
+            <div style="font-size:13px;color:var(--gray);margin-bottom:16px">Edition limitée — Logo GOGO FM</div>
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div style="font-family:var(--font-display);font-size:28px;color:var(--gold)">2 500 F</div>
+              <button onclick="commander('Switch GOGO FM','2 500 FCFA')" style="background:linear-gradient(135deg,var(--orange),var(--gold));border:none;border-radius:8px;padding:10px 20px;color:#000;font-weight:700;font-size:13px;cursor:pointer;letter-spacing:1px">+ COMMANDER</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- COMMANDE INFO -->
+      <div style="margin-top:48px;background:var(--glass);border:1px solid rgba(245,197,24,0.2);border-radius:var(--radius);padding:32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px">
+        <div>
+          <div style="font-family:var(--font-display);font-size:26px;margin-bottom:8px">📦 Comment commander ?</div>
+          <div style="font-size:14px;color:var(--gray);line-height:1.8">
+            1. Clique sur <strong style="color:var(--white)">+ COMMANDER</strong> sur l'article de ton choix<br>
+            2. Contacte-nous sur <strong style="color:var(--gold)">WhatsApp</strong> avec ton nom et adresse<br>
+            3. Paye via <strong style="color:var(--white)">Wave, Orange Money ou MTN Money</strong><br>
+            4. Reçois ton article en <strong style="color:var(--white)">2-5 jours ouvrables</strong>
+          </div>
+        </div>
+        <a href="https://wa.me/22500000000" target="_blank" style="background:linear-gradient(135deg,#25d366,#128c7e);border:none;border-radius:12px;padding:16px 28px;color:#fff;font-weight:700;font-size:15px;cursor:pointer;letter-spacing:1px;text-decoration:none;display:inline-block">
+          📱 WhatsApp Commander
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:var(--dark2);border-top:1px solid var(--glass-border);padding:30px 0 100px">
+    <div class="container" style="text-align:center">
+      <p style="font-size:13px;color:rgba(255,255,255,0.3)">© 2026 GOGO FM — Fait avec ❤️ en Côte d'Ivoire</p>
+    </div>
+  </footer>
+
+  <!-- PLAYER + IA -->
+  <div id="player-container"></div>
+
+  <script src="assets/navbar.js"></script>
+  <script src="assets/player.js"></script>
+  <script src="assets/ai-chat.js"></script>
+  <script>
+    loadNavbar('boutique');
+    document.addEventListener('DOMContentLoaded', loadPlayer);
+
+    function commander(nom, prix) {
+      alert(`🛍️ Commande : ${nom}\n💰 Prix : ${prix}\n\n📱 Contacte-nous sur WhatsApp pour finaliser !\n👉 +225 XX XX XX XX`);
+    }
+  </script>
+
+</body>
+</html>

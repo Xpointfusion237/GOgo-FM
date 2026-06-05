@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Émissions — GOGO FM</title>
+  <link rel="icon" type="image/png" href="images/logo_3D.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/base.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div id="navbar-container"></div>
+
+  <!-- HEADER PAGE -->
+  <div class="page-header">
+    <div class="container">
+      <div class="section-tag">📻 Nos Émissions</div>
+      <h1 class="section-title">Toutes les <span class="gradient-text">émissions</span></h1>
+      <p class="section-sub" style="margin:0 auto">Des programmes pour tous les goûts — musique, culture, débats, humour et bien plus.</p>
+    </div>
+  </div>
+
+  <!-- ÉMISSIONS -->
+  <section style="background:var(--dark)">
+    <div class="container">
+
+      <!-- ÉMISSION EN COURS -->
+      <div style="background:rgba(229,62,62,0.08);border:1px solid rgba(229,62,62,0.3);border-radius:var(--radius);padding:28px;margin-bottom:48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px">
+        <div style="display:flex;align-items:center;gap:20px">
+          <div style="width:60px;height:60px;background:linear-gradient(135deg,var(--orange),var(--gold));border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;animation:pulse-red 2s infinite">🎵</div>
+          <div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+              <span class="badge-live">EN DIRECT</span>
+              <span style="font-family:var(--font-tech);font-size:11px;color:var(--gray)">Maintenant sur GOGO FM</span>
+            </div>
+            <div style="font-family:var(--font-display);font-size:26px">La Matinale avec DJ Cobra</div>
+            <div style="font-size:13px;color:var(--gray)">Lun–Ven 7H–10H · Musique & Bonne humeur</div>
+          </div>
+        </div>
+        <button onclick="activatePlayer()" style="background:linear-gradient(135deg,var(--orange),var(--gold));border:none;border-radius:10px;padding:14px 28px;color:#000;font-weight:700;font-size:14px;cursor:pointer;letter-spacing:1px">
+          ▶ ÉCOUTER EN DIRECT
+        </button>
+      </div>
+
+      <!-- GRILLE ÉMISSIONS -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px">
+
+        <!-- Matinale -->
+        <div class="glass-card" style="overflow:hidden;cursor:pointer" onclick="activatePlayer()">
+          <div style="height:180px;background:linear-gradient(135deg,rgba(255,107,0,0.3),rgba(245,197,24,0.2));display:flex;align-items:center;justify-content:center;position:relative">
+            <div style="font-size:4rem">🎵</div>
+            <div style="position:absolute;top:12px;right:12px;background:rgba(0,0,0,0.7);border:1px solid var(--glass-border);padding:4px 10px;border-radius:50px;font-size:11px;color:var(--gold);font-family:var(--font-tech)">Lun–Ven 7H</div>
+            <div style="position:absolute;top:12px;left:12px" class="badge-live">LIVE</div>
+          </div>
+          <div style="padding:20px">
+            <div style="font-size:11px;color:var(--orange);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px">DJ Cobra</div>
+            <div style="font-family:var(--font-display);font-size:24px;margin-bottom:8px">La Matinale</div>
+            <div style="font-size:13px;color:var(--gray);margin-bottom:16px;line-height:1.6">Démarrez votre journée avec les meilleurs sons, l'actu et la bonne humeur.</div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <span style="background:rgba(255,107,0,0.1);border:1px solid rgba(255,107,0,0.2);color:var(--orange);padding:3px 10px;border-radius:50px;font-size:11px">🎶 Musique</span>
+              <span style="color:var(--gold);font-size:13px;font-weight:700">Écouter →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grand Débat -->
+        <div class="glass-card" style="overflow:hidden;cursor:pointer">
+          <div style="height:180px;background:linear-gradient(135deg,rgba(139,92,246,0.3),rgba(59,130,246,0.2));display:flex;align-items:center;justify-content:center;position:relative">
+            <div style="font-size:4rem">🗣️</div>
+            <div style="position:absolute;top:12px;right:12px;background:rgba(0,0,0,0.7);border:1px solid var(--glass-border);padding:4px 10px;border-radius:50px;font-size:11px;color:var(--gold);font-family:var(--font-tech)">Mar 20H</div>
+          </div>
+          <div style="padding:20px">
+            <div style="font-size:11px;color:var(--orange);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px">Animateur LHD</div>
+            <div style="font-family:var(--font-display);font-size:24px;margin-bottom:8px">Grand Débat</div>
+            <div style="font-size:13px;color:var(--gray);margin-bottom:16px;line-height:1.6">Les sujets qui font l'actualité, débattus avec passion et intelligence.</div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <span style="background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.2);color:#a78bfa;padding:3px 10px;border-radius:50px;font-size:11px">💬 Débat</span>
+              <span style="color:var(--gold);font-size:13px;font-weight:700">Découvrir →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Culture & Identité -->
+        <div class="glass-card" style="overflow:hidden;cursor:pointer">
+          <div style="height:180px;background:linear-gradient(135deg,rgba(16,185,129,0.3),rgba(59,130,246,0.2));display:flex;align-items:center;justify-content:center;position:relative">
+            <div style="font-size:4rem">🌍</div>
+            <div style="position:absolute;top:12px;right:12px;background:rgba(0,0,0,0.7);border:1px solid var(--glass-border);padding:4px 10px;border-radius:50px;font-size:11px;color:var(--gold);font-family:var(--font-tech)">Jeu 19H</div>
+          </div>
+          <div style="padding:20px">
+            <div style="font-size:11px;color:var(--orange);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px">Équipe GOGO</div>
+            <div style="font-family:var(--font-display);font-size:24px;margin-bottom:8px">Culture & Identité</div>
+            <div style="font-size:13px;color:var(--gray);margin-bottom:16px;line-height:1.6">Plongée dans la richesse culturelle africaine et de la diaspora.</div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <span style="background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.2);color:#34d399;padding:3px 10px;border-radius:50px;font-size:11px">🎭 Culture</span>
+              <span style="color:var(--gold);font-size:13px;font-weight:700">Découvrir →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flash Actu -->
+        <div class="glass-card" style="overflow:hidden;cursor:pointer">
+          <div style="height:180px;background:linear-gradient(135deg,rgba(239,68,68,0.3),rgba(249,115,22,0.2));display:flex;align-items:center;justify-content:center;position:relative">
+            <div style="font-size:4rem">📰</div>
+            <div style="position:absolute;top:12px;right:12px;background:rgba(0,0,0,0.7);border:1px solid var(--glass-border);padding:4px 10px;border-radius:50px;font-size:11px;color:var(--gold);font-family:var(--font-tech)">Quotidien 18H</div>
+          </div>
+          <div style="padding:20px">
+            <div style="font-size:11px;color:var(--orange);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px">Journaliste</div>
+            <div style="font-family:var(--font-display);font-size:24px;margin-bottom:8px">Flash Actu</div>
+            <div style="font-size:13px;color:var(--gray);margin-bottom:16px;line-height:1.6">L'actualité en temps réel, décryptée et analysée pour vous.</div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <span style="background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.2);color:#f87171;padding:3px 10px;border-radius:50px;font-size:11px">📡 Actu</span>
+              <span style="color:var(--gold);font-size:13px;font-weight:700">Découvrir →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Club du Rire -->
+        <div class="glass-card" style="overflow:hidden;cursor:pointer">
+          <div style="height:180px;background:linear-gradient(135deg,rgba(245,158,11,0.3),rgba(251,191,36,0.2));display:flex;align-items:center;justify-content:center;position:relative">
+            <div style="font-size:4rem">😂</div>
+            <div style="position:absolute;top:12px;right:12px;background:rgba(0,0,0,0.7);border:1px solid var(--glass-border);padding:4px 10px;border-radius:50px;font-size:11px;color:var(--gold);font-family:var(--font-tech)">Ven 21H</div>
+          </div>
+          <div style="padding:20px">
+            <div style="font-size:11px;color:var(--orange);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px">Team Comedy</div>
+            <div style="font-family:var(--font-display);font-size:24px;margin-bottom:8px">Le Club du Rire</div>
+            <div style="font-size:13px;color:var(--gray);margin-bottom:16px;line-height:1.6">Humour, sketchs et bonne humeur pour finir la semaine en beauté.</div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <span style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.2);color:#fbbf24;padding:3px 10px;border-radius:50px;font-size:11px">😂 Humour</span>
+              <span style="color:var(--gold);font-size:13px;font-weight:700">Découvrir →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Maître des Énigmes -->
+        <div class="glass-card" style="overflow:hidden;cursor:pointer;border-color:rgba(245,197,24,0.3)" onclick="window.location='enigmes.html'">
+          
+          <div style="height:180px;background:linear-gradient(135deg,rgba(124,58,237,0.3),rgba(245,197,24,0.2));display:flex;align-items:center;justify-content:center;position:relative">
+            <div style="font-size:4rem"><img src="images/Lhd.png" alt="" srcset="" style="height:225px;border-radius: 50%;"/></div>
+            <div style="position:absolute;top:12px;right:12px;background:rgba(0,0,0,0.7);border:1px solid rgba(245,197,24,0.3);padding:4px 10px;border-radius:50px;font-size:11px;color:var(--gold);font-family:var(--font-tech)">Sam 20H</div>
+            <div style="position:absolute;top:12px;left:12px;background:rgba(245,197,24,0.2);border:1px solid rgba(245,197,24,0.4);padding:4px 10px;border-radius:50px;font-size:10px;color:var(--gold);font-family:var(--font-tech);font-weight:700">⭐ PHARE</div>
+          </div>
+        
+                 
+
+          <div style="padding:20px">
+            <div style="font-size:11px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px">⭐ LHD — Animateur Phare</div>
+            <div style="font-family:var(--font-display);font-size:24px;margin-bottom:8px">Le Maître des Énigmes</div>
+            <div style="font-size:13px;color:var(--gray);margin-bottom:16px;line-height:1.6">L'émission phare de GOGO FM. Défis, énigmes et gagner de nombreux lots dans notre boutique !</div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <span style="background:rgba(245,197,24,0.1);border:1px solid rgba(245,197,24,0.3);color:var(--gold);padding:3px 10px;border-radius:50px;font-size:11px">🔮 Émission Phare</span>
+              <span style="color:var(--gold);font-size:13px;font-weight:700">Participer →</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:var(--dark2);border-top:1px solid var(--glass-border);padding:30px 0 100px">
+    <div class="container" style="text-align:center">
+      <p style="font-size:13px;color:rgba(255,255,255,0.3)">© 2026 GOGO FM — tous droits reservés a Xpointfuion.org</p>
+    </div>
+  </footer>
+
+  <!-- PLAYER + IA -->
+  <div id="player-container"></div>
+
+  <script src="assets/navbar.js"></script>
+  <script src="assets/player.js"></script>
+  <script src="assets/ai-chat.js"></script>
+  <script>
+    loadNavbar('emissions');
+    document.addEventListener('DOMContentLoaded', loadPlayer);
+  </script>
+
+</body>
+</html>

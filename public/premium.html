@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium — GOGO FM 👑</title>
+  <link rel="icon" type="image/png" href="images/logo_3D.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/base.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div id="navbar-container"></div>
+
+  <!-- HEADER PAGE -->
+  <div class="page-header" style="background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(245,197,24,0.12) 0%,transparent 60%)">
+    <div class="container">
+      <div class="section-tag">👑 Abonnements</div>
+      <h1 class="section-title">Passez <span class="gradient-text">Premium</span></h1>
+      <p class="section-sub" style="margin:0 auto">Profitez d'une expérience sans publicité, avec des contenus exclusifs et des avantages VIP.</p>
+    </div>
+  </div>
+
+  <section style="background:var(--dark)">
+    <div class="container">
+
+      <!-- PLANS -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:60px">
+
+        <!-- GRATUIT -->
+        <div style="background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);padding:32px;text-align:center;position:relative;overflow:hidden;transition:all 0.3s">
+          <div style="font-family:var(--font-display);font-size:28px;margin-bottom:8px">Gratuit</div>
+          <div style="font-family:var(--font-display);font-size:52px;background:linear-gradient(135deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px">0 F</div>
+          <div style="font-size:13px;color:var(--gray);margin-bottom:28px">pour toujours</div>
+          <div style="text-align:left;margin-bottom:28px">
+            <div style="display:flex;align-items:center;gap:10px;font-size:14px;margin-bottom:12px;color:var(--white)"><span style="color:var(--gold);font-weight:700">✓</span> Écoute radio en direct</div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:14px;margin-bottom:12px;color:var(--white)"><span style="color:var(--gold);font-weight:700">✓</span> Accès communauté</div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:14px;margin-bottom:12px;color:var(--white)"><span style="color:var(--gold);font-weight:700">✓</span> Podcasts publics</div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:14px;margin-bottom:12px;color:rgba(255,255,255,0.3)"><span style="color:rgba(255,255,255,0.2);font-weight:700">✗</span> Sans publicité</div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:14px;margin-bottom:12px;color:rgba(255,255,255,0.3)"><span style="color:rgba(255,255,255,0.2);font-weight:700">✗</span> Lives privés</div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.3)"><span style="color:rgba(255,255,255,0.2);font-weight:700">✗</span> Badge VIP</div>
+          </div>
+          <button onclick="choisirPlan('Gratuit','0')" class="btn btn-outline" style="width:100%;justify-content:center">Continuer gratuit</button>
+        </div>
+
+        <!-- PREMIUM -->
+        <div style="background:var(--glass);border:1px solid rgba(245,197,24,0.4);border-radius:var(--radius);padding:32px;text-align:center;position:relative;overflow:hidden;transition:all 0.3s;box-shadow:0 0 60px rgba(245,197,24,0.08)">
+          <div style="position:absolute;top:16px;right:-30px;background:linear-gradient(135deg,var(--orange),var(--gold));color:#000;font-size:11px;font-weight:700;letter-spacing:1px;padding:5px 40px;transform:rotate(45deg)">POPULAIRE</div>
+          <div style="font-family:var(--font-display);font-size:28px;margin-bottom:8px;color:var(--gold)">Premium</div>
+          <div style="font-family:var(--font-display);font-size:52px;background:linear-gradient(135deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px">2 500 F</div>
+          <div style="font-size:13px;color:var(--gray);margin-bottom:28px">par mois</div>
+          <div style="text-align:left;margin-bottom:28px">
+            <div style="display:flex;align-items:center;gap:10px;font-size:14px;margin-bottom:12px;color:var(--white)"><span style="color:var(--gold);font-weight:700">✓</span> Écoute radio en direct</div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:14px;margin-bottom:12px;color:var(--white)"><span style="color:var(--gold);font-weight:700">✓</span> Accès communauté</div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:14px;margin-bottom:12px;color:var(--white)"><span style="color:var(--gold);font-weight:700">✓</span> Tous les podcasts</div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:14px;margin-bottom:12px;color:var(--white)"><span style="color:var(--gold);font-weight:700">✓</span> Sans publicité 🚫</div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:14px;margin-bottom:12px;color:var(--white)"><span style="color:var(--gold);font-weight:700">✓</span> Lives privés</div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white)"><span style="color:var(--gold);font-weight:700">✓</span> Badge VIP 🌟</div>
+          </div>
+          <button onclick="choisirPlan('Premium','2500')" class="btn btn-primary" style="width:100%;justify-content:center">⭐ S'abonner Premium</button>
+        </div>
+
+        <!-- VIP PRO -->
+        <div style="background:var(--glass);border:1px solid rgba(245,197,24,0.2);border-radius:var(--radius);padding:32px;text-align:center;position:relative;overflow:hidden;transition:all 0.3s">
+          <div style="font-family:var(--font-display);font-size:28px;margin-bottom:8px">VIP Pro</div>
+          <div style="font-family:var(--font-display);font-size:52px;background:linear-gradient(135deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px">5 000 F</div>
+          <div style="font-size:13px;color:var(--gray);margin-bottom:28px">par mois</div>
+          <div style="text-align:left;margin-bottom:28px">
+            <div style="display:flex;align-items:center;gap:10px;font-size:14px;margin-bottom:12px;color:var(--white)"><span style="color:var(--gold);font-weight:700">✓</span> Tout Premium inclus</div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:14px;margin-bottom:12px;color:var(--white)"><span style="color:var(--gold);font-weight:700">✓</span> Accès backstage animateurs</div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:14px;margin-bottom:12px;color:var(--white)"><span style="color:var(--gold);font-weight:700">✓</span> Cadeaux offerts chaque mois</div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:14px;margin-bottom:12px;color:var(--white)"><span style="color:var(--gold);font-weight:700">✓</span> Priorité dans les concours</div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:14px;margin-bottom:12px;color:var(--white)"><span style="color:var(--gold);font-weight:700">✓</span> Badge VIP Pro 💎</div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white)"><span style="color:var(--gold);font-weight:700">✓</span> Appel avec LHD (mensuel)</div>
+          </div>
+          <button onclick="choisirPlan('VIP Pro','5000')" class="btn btn-outline" style="width:100%;justify-content:center;border-color:rgba(245,197,24,0.3);color:var(--gold)">💎 Devenir VIP Pro</button>
+        </div>
+
+      </div>
+
+      <!-- PAIEMENT -->
+      <div style="background:var(--glass);border:1px solid rgba(245,197,24,0.2);border-radius:var(--radius);padding:32px;margin-bottom:40px">
+        <div style="font-family:var(--font-display);font-size:26px;margin-bottom:20px;text-align:center">💳 Modes de paiement acceptés</div>
+        <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap">
+          <div style="background:rgba(255,255,255,0.04);border:1px solid var(--glass-border);border-radius:12px;padding:16px 24px;text-align:center;min-width:120px">
+            <div style="font-size:2rem;margin-bottom:8px">📱</div>
+            <div style="font-weight:700;font-size:14px">Wave</div>
+            <div style="font-size:11px;color:var(--gray)">Instantané</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid var(--glass-border);border-radius:12px;padding:16px 24px;text-align:center;min-width:120px">
+            <div style="font-size:2rem;margin-bottom:8px">🟠</div>
+            <div style="font-weight:700;font-size:14px">Orange Money</div>
+            <div style="font-size:11px;color:var(--gray)">Afrique</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid var(--glass-border);border-radius:12px;padding:16px 24px;text-align:center;min-width:120px">
+            <div style="font-size:2rem;margin-bottom:8px">📲</div>
+            <div style="font-weight:700;font-size:14px">MTN Money</div>
+            <div style="font-size:11px;color:var(--gray)">Afrique</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid var(--glass-border);border-radius:12px;padding:16px 24px;text-align:center;min-width:120px">
+            <div style="font-size:2rem;margin-bottom:8px">💳</div>
+            <div style="font-weight:700;font-size:14px">Stripe</div>
+            <div style="font-size:11px;color:var(--gray)">International</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid var(--glass-border);border-radius:12px;padding:16px 24px;text-align:center;min-width:120px">
+            <div style="font-size:2rem;margin-bottom:8px">🌍</div>
+            <div style="font-weight:700;font-size:14px">PayPal</div>
+            <div style="font-size:11px;color:var(--gray)">International</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div style="max-width:700px;margin:0 auto">
+        <div style="font-family:var(--font-display);font-size:32px;text-align:center;margin-bottom:28px">Questions fréquentes</div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="background:var(--glass);border:1px solid var(--glass-border);border-radius:12px;overflow:hidden">
+            <div onclick="toggleFaq(this)" style="padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600">
+              <span>Puis-je annuler mon abonnement ?</span>
+              <span style="color:var(--gold);font-size:1.2rem">+</span>
+            </div>
+            <div style="display:none;padding:0 20px 16px;font-size:14px;color:var(--gray);line-height:1.6">
+              Oui, vous pouvez annuler à tout moment. L'accès Premium reste actif jusqu'à la fin de la période payée.
+            </div>
+          </div>
+          <div style="background:var(--glass);border:1px solid var(--glass-border);border-radius:12px;overflow:hidden">
+            <div onclick="toggleFaq(this)" style="padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600">
+              <span>Comment payer avec Wave ou Orange Money ?</span>
+              <span style="color:var(--gold);font-size:1.2rem">+</span>
+            </div>
+            <div style="display:none;padding:0 20px 16px;font-size:14px;color:var(--gray);line-height:1.6">
+              Après avoir choisi votre plan, vous recevrez un numéro de paiement Wave/Orange Money. Envoyez le montant et envoyez la capture d'écran sur WhatsApp.
+            </div>
+          </div>
+          <div style="background:var(--glass);border:1px solid var(--glass-border);border-radius:12px;overflow:hidden">
+            <div onclick="toggleFaq(this)" style="padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600">
+              <span>Qu'est-ce que l'appel mensuel avec LHD ?</span>
+              <span style="color:var(--gold);font-size:1.2rem">+</span>
+            </div>
+            <div style="display:none;padding:0 20px 16px;font-size:14px;color:var(--gray);line-height:1.6">
+              Chaque mois, les abonnés VIP Pro reçoivent un appel exclusif de 15 minutes avec LHD, l'animateur phare de GOGO FM.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:var(--dark2);border-top:1px solid var(--glass-border);padding:30px 0 100px">
+    <div class="container" style="text-align:center">
+      <p style="font-size:13px;color:rgba(255,255,255,0.3)">© 2026 GOGO FM — Fait avec ❤️ en Côte d'Ivoire</p>
+    </div>
+  </footer>
+
+  <!-- PLAYER + IA -->
+  <div id="player-container"></div>
+
+  <script src="assets/navbar.js"></script>
+  <script src="assets/player.js"></script>
+  <script src="assets/ai-chat.js"></script>
+  <script>
+    loadNavbar('premium');
+    document.addEventListener('DOMContentLoaded', loadPlayer);
+
+    function choisirPlan(plan, prix) {
+      if (prix === '0') {
+        alert('✅ Tu continues avec le plan Gratuit.\nProfite de GOGO FM !');
+        return;
+      }
+      alert(`👑 Plan choisi : ${plan}\n💰 Prix : ${parseInt(prix).toLocaleString('fr-FR')} FCFA/mois\n\n📱 Contacte-nous sur WhatsApp pour activer ton abonnement !\n👉 +225 XX XX XX XX\n\nModes de paiement : Wave, Orange Money, MTN, Stripe, PayPal`);
+    }
+
+    function toggleFaq(el) {
+      const content = el.nextElementSibling;
+      const icon = el.querySelector('span:last-child');
+      if (content.style.display === 'none') {
+        content.style.display = 'block';
+        icon.textContent = '−';
+        icon.style.color = 'var(--orange)';
+      } else {
+        content.style.display = 'none';
+        icon.textContent = '+';
+        icon.style.color = 'var(--gold)';
+      }
+    }
+  </script>
+
+</body>
+</html>

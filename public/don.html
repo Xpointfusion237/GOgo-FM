@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Don — GOGO FM ❤️</title>
+  <link rel="icon" type="image/png" href="images/logo_3D.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/base.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div id="navbar-container"></div>
+
+  <!-- HEADER PAGE -->
+  <div class="page-header" style="background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(255,69,0,0.12) 0%,transparent 60%)">
+    <div class="container">
+      <div class="section-tag" style="background:rgba(255,69,0,0.1);border-color:rgba(255,69,0,0.3);color:#ff6b35">❤️ Cause Humanitaire</div>
+      <h1 class="section-title">Soutenir les <span class="gradient-text">handicapés</span></h1>
+      <p class="section-sub" style="margin:0 auto">GOGO FM s'engage pour les victimes d'accidents de la route. Chaque don change une vie.</p>
+    </div>
+  </div>
+
+  <!-- STATS IMPACT -->
+  <section style="background:var(--dark);padding:40px 0">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:60px">
+        <div style="background:rgba(255,69,0,0.06);border:1px solid rgba(255,69,0,0.2);border-radius:var(--radius);padding:28px;text-align:center">
+          <div style="font-size:2.5rem;margin-bottom:8px"><img src="images/drcaccident.jpg" alt="" srcset=""></div>
+          <div style="font-family:var(--font-display);font-size:42px;color:#ff6b35">1,35M</div>
+          <div style="font-size:13px;color:var(--gray);margin-top:4px">décès par accident de route par an dans le monde</div>
+        </div>
+        <div style="background:rgba(255,215,0,0.06);border:1px solid rgba(255,215,0,0.2);border-radius:var(--radius);padding:28px;text-align:center">
+          <div style="font-size:2.5rem;margin-bottom:8px"><img src="images/homme-fauteuil.jpg" alt=""></div>
+          <div style="font-family:var(--font-display);font-size:42px;color:var(--gold)">50M+</div>
+          <div style="font-size:13px;color:var(--gray);margin-top:4px">blessés graves et handicapés chaque année sur les routes</div>
+        </div>
+        <div style="background:rgba(50,205,50,0.06);border:1px solid rgba(50,205,50,0.2);border-radius:var(--radius);padding:28px;text-align:center">
+          <div style="font-size:2.5rem;margin-bottom:8px">🌍</div>
+          <div style="font-family:var(--font-display);font-size:42px;color:#32cd32">93%</div>
+          <div style="font-size:13px;color:var(--gray);margin-top:4px">des victimes viennent des pays en développement dont l'Afrique</div>
+        </div>
+      </div>
+
+      <!-- CONTENU PRINCIPAL -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start">
+
+        <!-- GAUCHE -->
+        <div>
+          <!-- COMPTEUR -->
+          <div style="background:var(--glass);border:1px solid rgba(245,197,24,0.25);border-radius:var(--radius);padding:28px;margin-bottom:24px">
+            <div style="font-family:var(--font-tech);font-size:11px;letter-spacing:2px;color:var(--gold);margin-bottom:16px">📊 DONS COLLECTÉS CE MOIS</div>
+            <div style="font-family:var(--font-display);font-size:52px;background:linear-gradient(135deg,var(--gold),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px" id="don-total">247 500 F</div>
+            <div style="font-size:13px;color:var(--gray);margin-bottom:16px">de l'objectif de <strong style="color:var(--white)">1 000 000 F</strong> ce mois</div>
+            <div style="background:rgba(255,255,255,0.06);border-radius:50px;height:12px;overflow:hidden;margin-bottom:8px">
+              <div id="don-progress" style="height:100%;width:24.75%;background:linear-gradient(90deg,var(--orange),var(--gold));border-radius:50px;transition:width 1s ease"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--gray)">
+              <span id="don-pct">24.75% atteint</span>
+              <span>🏆 <strong style="color:var(--gold)" id="don-count">183</strong> donateurs</span>
+            </div>
+          </div>
+
+          <!-- COMMENT ÇA MARCHE -->
+          <div style="background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);padding:28px;margin-bottom:24px">
+            <div style="font-family:var(--font-display);font-size:22px;margin-bottom:20px">🤝 Comment ça marche ?</div>
+            <div style="display:flex;flex-direction:column;gap:16px">
+              <div style="display:flex;gap:16px;align-items:flex-start">
+                <div style="width:32px;height:32px;background:linear-gradient(135deg,var(--orange),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:#000;flex-shrink:0">1</div>
+                <div>
+                  <div style="font-weight:700;margin-bottom:4px">Choisissez un montant</div>
+                  <div style="font-size:13px;color:var(--gray)">Dès 1 $,chaque euro compte pour aider une victime.</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:16px;align-items:flex-start">
+                <div style="width:32px;height:32px;background:linear-gradient(135deg,var(--orange),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:#000;flex-shrink:0">2</div>
+                <div>
+                  <div style="font-weight:700;margin-bottom:4px">Payez en toute sécurité</div>
+                  <div style="font-size:13px;color:var(--gray)">Wave, Orange Money, Visa ou PayPal acceptés.</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:16px;align-items:flex-start">
+                <div style="width:32px;height:32px;background:linear-gradient(135deg,var(--orange),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:#000;flex-shrink:0">3</div>
+                <div>
+                  <div style="font-weight:700;margin-bottom:4px">Recevez votre reçu</div>
+                  <div style="font-size:13px;color:var(--gray)">Un reçu vous est envoyé par SMS immédiatement après le don.</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:16px;align-items:flex-start">
+                <div style="width:32px;height:32px;background:linear-gradient(135deg,var(--orange),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:#000;flex-shrink:0">4</div>
+                <div>
+                  <div style="font-weight:700;margin-bottom:4px">Impact direct</div>
+                  <div style="font-size:13px;color:var(--gray)">100% des dons vont aux victimes. Zéro frais administratifs cachés.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DERNIERS DONATEURS -->
+          <div style="background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);padding:24px">
+            <div style="font-family:var(--font-tech);font-size:11px;letter-spacing:2px;color:var(--gold);margin-bottom:16px">❤️ DERNIERS DONATEURS</div>
+            <div id="don-feed" style="display:flex;flex-direction:column;gap:12px">
+              <div style="display:flex;align-items:center;gap:12px;padding:10px;background:rgba(255,255,255,0.03);border-radius:10px">
+                <span style="font-size:1.5rem">👤</span>
+                <span style="flex:1;font-weight:600">Aminata K.</span>
+                <span style="color:var(--gold);font-weight:700;font-family:var(--font-tech)">2 000 F</span>
+                <span style="color:rgba(255,255,255,0.3);font-size:11px">2 min</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:12px;padding:10px;background:rgba(255,255,255,0.03);border-radius:10px">
+                <span style="font-size:1.5rem">👤</span>
+                <span style="flex:1;font-weight:600">Koffi B.</span>
+                <span style="color:var(--gold);font-weight:700;font-family:var(--font-tech)">800 $</span>
+                <span style="color:rgba(255,255,255,0.3);font-size:11px">8 min</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:12px;padding:10px;background:rgba(255,255,255,0.03);border-radius:10px">
+                <span style="font-size:1.5rem">🫂</span>
+                <span style="flex:1;font-weight:600">Anonyme</span>
+                <span style="color:var(--gold);font-weight:700;font-family:var(--font-tech)">1 000 $</span>
+                <span style="color:rgba(255,255,255,0.3);font-size:11px">15 min</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DROITE : FORMULAIRE -->
+        <div>
+          <div style="background:var(--glass);border:1px solid rgba(255,69,0,0.25);border-radius:var(--radius);padding:32px;position:sticky;top:90px">
+            <div style="font-family:var(--font-display);font-size:30px;margin-bottom:8px"><img src="images/icons8-loading-heart-50-3.apng.png" alt="" srcset=""> Faire un don</div>
+            <div style="font-size:14px;color:var(--gray);margin-bottom:28px">100% des dons vont directement aux victimes d'accidents en situation de handicap.</div>
+
+            <!-- MONTANTS -->
+            <div style="font-size:12px;color:var(--gray);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px">Choisir un montant</div>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px">
+              <button class="don-btn" onclick="selectDon(this,'500')">1 $</button>
+              <button class="don-btn" onclick="selectDon(this,'1000')">50 $</button>
+              <button class="don-btn" onclick="selectDon(this,'2000')">100 $</button>
+              <button class="don-btn" onclick="selectDon(this,'5000')">500 $</button>
+              <button class="don-btn" onclick="selectDon(this,'10000')">1 000 $</button>
+              <button class="don-btn" onclick="selectDon(this,'autre')" style="color:var(--gold)">Autre 💛</button>
+            </div>
+
+            <!-- MONTANT LIBRE -->
+            <div id="don-custom" style="display:none;margin-bottom:16px">
+              <input type="number" id="don-custom-input" placeholder="Montant en $" style="width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,69,0,0.3);border-radius:10px;padding:12px 16px;color:var(--white);font-size:16px;font-family:var(--font-body);outline:none"/>
+            </div>
+
+            <!-- NOM -->
+            <input type="text" id="don-nom" placeholder="Votre nom (optionnel)" style="width:100%;background:rgba(255,255,255,0.06);border:1px solid var(--glass-border);border-radius:10px;padding:12px 16px;color:var(--white);font-size:14px;font-family:var(--font-body);outline:none;margin-bottom:16px"/>
+
+            <!-- MESSAGE -->
+            <textarea id="don-message" placeholder="Un message d'encouragement (optionnel)" style="width:100%;background:rgba(255,255,255,0.06);border:1px solid var(--glass-border);border-radius:10px;padding:12px 16px;color:var(--white);font-size:14px;font-family:var(--font-body);outline:none;margin-bottom:16px;resize:none;height:80px"></textarea>
+
+            <!-- PAIEMENT -->
+            <div style="font-size:12px;color:var(--gray);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px">Mode de paiement</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px">
+              <button class="pay-btn active" onclick="selectPay(this)">📱 Wave</button>
+              <button class="pay-btn" onclick="selectPay(this)">💳 Orange Money</button>
+              <button class="pay-btn" onclick="selectPay(this)">📲 Visa</button>
+              <button class="pay-btn" onclick="selectPay(this)">🌍 PayPal</button>
+            </div>
+
+            <!-- BOUTON DON -->
+            <button onclick="envoyerDon()" style="width:100%;padding:18px;background:linear-gradient(135deg,#ff4500,#ffd700);border:none;border-radius:12px;color:#000;font-size:17px;font-weight:800;letter-spacing:1px;cursor:pointer;text-transform:uppercase;transition:all 0.3s;font-family:var(--font-body)">
+              <img src="images/love.png" alt="" style="height: 50px; border-radius: 50%;" srcset=""> FAIRE UN DON MAINTENANT
+            </button>
+
+            <div style="margin-top:16px;padding:12px;background:rgba(50,205,50,0.06);border:1px solid rgba(50,205,50,0.2);border-radius:8px;font-size:12px;color:rgba(255,255,255,0.5);text-align:center">
+              🔒 Paiement 100% sécurisé · Reçu par SMS · Zéro frais cachés
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:var(--dark2);border-top:1px solid var(--glass-border);padding:30px 0 100px">
+    <div class="container" style="text-align:center">
+      <p style="font-size:13px;color:rgba(255,255,255,0.3)">© 2026 GOGO FM — par le groupe Xpointfusion.org</p>
+    </div>
+  </footer>
+
+  <!-- PLAYER + IA -->
+  <div id="player-container"></div>
+
+  <style>
+    .don-btn {
+      padding:12px;border-radius:10px;
+      border:1px solid var(--glass-border);
+      background:var(--glass);color:var(--white);
+      font-size:14px;font-weight:700;cursor:pointer;
+      transition:all 0.2s;font-family:var(--font-body);
+    }
+    .don-btn:hover,.don-btn.active {
+      border-color:rgba(255,69,0,0.6);
+      background:rgba(255,69,0,0.15);
+      color:#ff6b35;
+    }
+  </style>
+
+  <script src="assets/navbar.js"></script>
+  <script src="assets/player.js"></script>
+  <script src="assets/ai-chat.js"></script>
+  <script>
+    loadNavbar('don');
+    document.addEventListener('DOMContentLoaded', loadPlayer);
+
+    let donMontant = '1000';
+
+    function selectDon(el, montant) {
+      document.querySelectorAll('.don-btn').forEach(b => b.classList.remove('active'));
+      el.classList.add('active');
+      if (montant === 'autre') {
+        document.getElementById('don-custom').style.display = 'block';
+        donMontant = 'autre';
+      } else {
+        document.getElementById('don-custom').style.display = 'none';
+        donMontant = montant;
+      }
+    }
+
+    function selectPay(el) {
+      document.querySelectorAll('.pay-btn').forEach(b => b.classList.remove('active'));
+      el.classList.add('active');
+    }
+
+    function envoyerDon() {
+      let montant = donMontant;
+      if (montant === 'autre') {
+        montant = document.getElementById('don-custom-input').value;
+        if (!montant || montant < 100) {
+          alert('Veuillez entrer un montant valide (minimum 100 F)');
+          return;
+        }
+      }
+      const nom = document.getElementById('don-nom').value.trim() || 'Anonyme';
+      const msg = document.getElementById('don-message').value.trim();
+      alert(`❤️ Merci ${nom} !\n\nMontant : ${parseInt(montant).toLocaleString('fr-FR')} FCFA\n${msg ? 'Message : ' + msg + '\n' : ''}\n📱 Vous allez être redirigé vers le paiement.\nMerci pour votre générosité ! 🙏`);
+
+      // Ajouter dans le feed
+      const feed = document.getElementById('don-feed');
+      const item = document.createElement('div');
+      item.style.cssText = 'display:flex;align-items:center;gap:12px;padding:10px;background:rgba(255,69,0,0.06);border-radius:10px;border:1px solid rgba(255,69,0,0.2)';
+      item.innerHTML = `
+        <span style="font-size:1.5rem"><img src="images/love.png" style="height:200px"/></span>
+        <span style="flex:1;font-weight:600">${nom}</span>
+        <span style="color:var(--gold);font-weight:700;font-family:var(--font-tech)">${parseInt(montant).toLocaleString('fr-FR')} F</span>
+        <span style="color:rgba(255,255,255,0.3);font-size:11px">maintenant</span>
+      `;
+      feed.prepend(item);
+      if (feed.children.length > 5) feed.removeChild(feed.lastChild);
+
+      // Mettre à jour compteur
+      const total = document.getElementById('don-total');
+      const current = parseInt(total.textContent.replace(/[^0-9]/g,'')) + parseInt(montant);
+      total.textContent = current.toLocaleString('fr-FR') + ' F';
+      const pct = Math.min(100, (current / 1000000 * 100)).toFixed(2);
+      document.getElementById('don-progress').style.width = pct + '%';
+      document.getElementById('don-pct').textContent = pct + '% atteint';
+      const count = parseInt(document.getElementById('don-count').textContent) + 1;
+      document.getElementById('don-count').textContent = count;
+    }
+  </script>
+
+</body>
+</html>
