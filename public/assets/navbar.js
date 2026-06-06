@@ -11,7 +11,7 @@ function loadNavbar(activePage) {
         <div class="nav-inner">
 
           <a href="index.html" class="nav-logo">
-            <img src="images/logo_3D.png" alt="GOGO FM"
+            <img src="images/Logo_3D.png" alt="Logo_3D FM"
               style="height:48px;object-fit:contain;border-radius:50%;filter:drop-shadow(0 0 12px rgba(245,197,24,0.5));transition:all 0.3s"
               onmouseover="this.style.filter='drop-shadow(0 0 24px rgba(255,107,0,0.8))'"
               onmouseout="this.style.filter='drop-shadow(0 0 12px rgba(245,197,24,0.5))'" />
