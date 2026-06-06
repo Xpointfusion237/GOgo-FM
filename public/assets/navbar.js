@@ -64,6 +64,13 @@ function loadNavbar(activePage) {
   });
 }
 
+// Charger Analytics
+  if (!document.querySelector('script[src*="analytics.js"]')) {
+    const s = document.createElement('script');
+    s.src = 'assets/analytics.js';
+    document.head.appendChild(s);
+  }
+
 function toggleMobile() {
   document.getElementById('hamburger').classList.toggle('active');
   document.getElementById('nav-mobile').classList.toggle('open');
