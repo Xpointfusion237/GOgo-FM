@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gogo-fm.vercel.app/sitemap.xml
