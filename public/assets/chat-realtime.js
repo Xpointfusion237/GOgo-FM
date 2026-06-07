@@ -79,7 +79,8 @@ async function subscribeToMessages(page = 'general', onMessage) {
   if (!supabaseClient) await initSupabase();
 
   const channel = supabaseClient
-    .channel(`chat-${page}`)
+    /**.channel(`chat-${page}`)**/
+    .channel(`chat-${page}-${Math.random()}`)
     .on('postgres_changes', {
       event: 'INSERT',
       schema: 'public',
