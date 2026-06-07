@@ -91,10 +91,11 @@
               </div>
             </div>
             <div style="padding:14px;border-top:1px solid var(--glass-border);display:flex;gap:10px">
-              <input type="text" id="comment-input" placeholder="Écrire un commentaire..."
+              <input type="text" id="chat-input-realtime" placeholder="Écrire un commentaire..."
                 onkeydown="if(event.key==='Enter') postComment()"
                 style="flex:1;background:rgba(255,255,255,0.04);border:1px solid var(--glass-border);border-radius:10px;padding:10px 14px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none"/>
-              <button onclick="postComment()" class="btn btn-primary" style="padding:10px 18px">Envoyer</button>
+              <!--<button onclick="postComment()" class="btn btn-primary" style="padding:10px 18px">Envoyer</button>-->
+              <button id="chat-send-btn" class="btn btn-primary" style="padding:10px 18px">Envoyer</button>
             </div>
           </div>
         </div>
@@ -211,12 +212,20 @@
   <!-- PLAYER + IA -->
   <div id="player-container"></div>
 
+  <script src="assets/chat-realtime.js"></script>
+
   <script src="assets/navbar.js"></script>
   <script src="assets/player.js"></script>
   <script src="assets/ai-chat.js"></script>
   <script>
+    /**loadNavbar('communaute');
+    document.addEventListener('DOMContentLoaded', loadPlayer);**/
+
     loadNavbar('communaute');
-    document.addEventListener('DOMContentLoaded', loadPlayer);
+document.addEventListener('DOMContentLoaded', () => {
+  loadPlayer();
+  initRealtimeChat('comment-feed', 'chat-input-realtime', 'chat-send-btn', 'communaute');
+});
 
     // COMMENTAIRES
     function postComment() {
