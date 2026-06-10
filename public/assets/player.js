@@ -179,7 +179,7 @@ function loadPlayer() {
           <div class="player-controls">
 
             <!-- VOLUME - -->
-            <button class="p-btn" title="Volume -" onclick="volumeDown()">
+            <!--<button class="p-btn" title="Volume -" onclick="volumeDown()">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                 <path d="M11 5L6 9H2v6h4l5 4V5z" fill="url(#gv1)"/>
                 <line x1="14" y1="12" x2="19" y2="12" stroke="url(#gv1)" stroke-width="2" stroke-linecap="round"/>
@@ -189,29 +189,42 @@ function loadPlayer() {
                   </linearGradient>
                 </defs>
               </svg>
-            </button>
+            </button>-->
+
+
 
             <!-- MUTE MIC -->
             <button class="p-btn" id="mute-btn" title="Mute micro" onclick="toggleMute()">
-              <img src="images/mic_mute.png" id="mute-icon"
+              <img src="images/microphone1.png" id="mute-icon"
                 style="width:22px;height:22px;object-fit:contain;opacity:0.5;transition:opacity 0.2s"/>
             </button>
 
+           <!-- VOLUME - -->
+            <button class="p-btn" title="Volume -" onclick="volumedown()">
+              <img src="images/volume-1.png"
+                style="width:22px;height:22px;object-fit:contain"/>
+            </button>
+
+
+
             <!-- PLAY / PAUSE — bouton principal -->
             <button class="p-btn-play" id="play-btn-main" onclick="togglePlay()">
-              <img src="images/play.png" id="play-icon"
+              <img src="images/play1.png" id="play-icon"
                 style="width:36px;height:36px;object-fit:contain;border-radius:50%"/>
             </button>
 
             <!-- VOLUME + -->
             <button class="p-btn" title="Volume +" onclick="volumeUp()">
-              <img src="images/volume.png"
+              <img src="images/volume+1.png"
                 style="width:22px;height:22px;object-fit:contain"/>
             </button>
 
             <!-- VOLUME MUTE (sourdine totale) -->
             <button class="p-btn" id="vol-mute-btn" title="Sourdine" onclick="toggleVolMute()">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <!--<svg width="22" height="22" viewBox="0 0 24 24" fill="none">-->
+
+               <img src="images/mute1.png">
+
                 <path d="M11 5L6 9H2v6h4l5 4V5z" fill="url(#gv2)" opacity="0.5"/>
                 <line x1="14" y1="9" x2="20" y2="15" stroke="url(#gv2)" stroke-width="2" stroke-linecap="round"/>
                 <line x1="20" y1="9" x2="14" y2="15" stroke="url(#gv2)" stroke-width="2" stroke-linecap="round"/>
@@ -276,12 +289,18 @@ function loadPlayer() {
   audio = document.getElementById('radio-audio');
 }
 
+// Démarrer la mise à jour des infos
+  setTimeout(startPlayerInfoUpdate, 500);
+
+
+
+
 // ─── PLAY / PAUSE ────────────────────────────────────────────
 function activatePlayer() {
   if (!isPlaying) togglePlay();
 }
 
-function togglePlay() {
+/**function togglePlay() {
   isPlaying = !isPlaying;
   const playIcon = document.getElementById('play-icon');
   const artwork = document.getElementById('player-artwork');
@@ -294,7 +313,7 @@ function togglePlay() {
       isPlaying = false;
       if (playIcon) playIcon.src = 'images/play.png';
     });
-    if (playIcon) playIcon.src = 'images/pause.png';
+    if (playIcon) playIcon.src = 'images/pause1.png';
     artwork.classList.remove('paused');
     eq.style.display = 'flex';
     listenInterval = setInterval(() => {
@@ -313,12 +332,81 @@ function togglePlay() {
     eq.style.display = 'none';
     clearInterval(listenInterval);
   }
+}**/
+
+
+function togglePlay() {
+  isPlaying = !isPlaying;
+  const playIcon = document.getElementById('play-icon');
+  const playBtn = document.getElementById('play-btn-main');
+  const artwork = document.getElementById('player-artwork');
+  const eq = document.getElementById('player-eq');
+
+  if (isPlaying) {
+    audio.src = STREAM_URL;
+    audio.volume = currentVolume / 100;
+    audio.play().catch(() => {
+      isPlaying = false;
+      if (playIcon) {
+        playIcon.src = 'images/play1.png';
+        playIcon.style.width = '36px';
+        playIcon.style.height = '36px';
+      }
+    });
+
+    // Changer vers icône PAUSE
+    if (playIcon) {
+      playIcon.src = 'images/pause1.png';
+      playIcon.style.width = '52px';
+      playIcon.style.height = '52px';
+      playIcon.style.borderRadius = '50%';
+    }
+    if (playBtn) {
+      playBtn.style.background = 'rgba(255,69,0,0.15)';
+      playBtn.style.borderColor = 'rgba(255,69,0,0.6)';
+      playBtn.style.boxShadow = '0 0 30px rgba(255,69,0,0.5)';
+    }
+    if (artwork) artwork.classList.remove('paused');
+    if (eq) eq.style.display = 'flex';
+
+    // Timer
+    listenInterval = setInterval(() => {
+      listenSeconds++;
+      const h = String(Math.floor(listenSeconds / 3600)).padStart(2, '0');
+      const m = String(Math.floor((listenSeconds % 3600) / 60)).padStart(2, '0');
+      const s = String(listenSeconds % 60).padStart(2, '0');
+      const el = document.getElementById('listen-time');
+      if (el) el.textContent = `${h}:${m}:${s}`;
+    }, 1000);
+
+  } else {
+    audio.pause();
+    audio.src = '';
+
+    // Changer vers icône PLAY
+    if (playIcon) {
+      playIcon.src = 'images/play1.png';
+      playIcon.style.width = '36px';
+      playIcon.style.height = '36px';
+      playIcon.style.borderRadius = '50%';
+    }
+    if (playBtn) {
+      playBtn.style.background = 'linear-gradient(135deg, rgba(255,107,0,0.2), rgba(245,197,24,0.15))';
+      playBtn.style.borderColor = 'rgba(245,197,24,0.5)';
+      playBtn.style.boxShadow = '0 0 25px rgba(255,107,0,0.3)';
+    }
+    if (artwork) artwork.classList.add('paused');
+    if (eq) eq.style.display = 'none';
+    clearInterval(listenInterval);
+  }
 }
+
+
 
 // ─── VOLUME ──────────────────────────────────────────────────
 function updateVolume(val) {
   currentVolume = parseInt(val);
-  if (audio) audio.volume = currentVolume / 100;
+  if (audio) audio.volume = currentVolume / 200;
   const slider = document.querySelector('.volume-slider');
   if (slider) {
     slider.style.background = `linear-gradient(90deg, var(--orange) ${val}%, rgba(255,255,255,0.15) ${val}%)`;
@@ -336,7 +424,7 @@ function volumeDown() {
 function volumeUp() {
   const slider = document.querySelector('.volume-slider');
   if (slider) {
-    slider.value = Math.min(100, parseInt(slider.value) + 10);
+    slider.value = Math.min(200, parseInt(slider.value) + 10);
     updateVolume(slider.value);
   }
 }
@@ -375,6 +463,126 @@ function toggleVolMute() {
     if (btn) btn.classList.remove('active');
   }
 }
+
+
+
+// ─── AFFICHER TITRE + ARTISTE ────────────────────────────────
+const SHOWS = [
+  { heure_debut: 6,  heure_fin: 10, nom: 'La Matinale',         animateur: 'DJ Cobra',    emoji: '🌅' },
+  { heure_debut: 10, heure_fin: 12, nom: 'Mid Morning Mix',     animateur: 'GoGo IA',     emoji: '🎵' },
+  { heure_debut: 12, heure_fin: 14, nom: 'Flash Actu Midi',     animateur: 'Journaliste', emoji: '📰' },
+  { heure_debut: 14, heure_fin: 17, nom: 'Afternoon Vibes',     animateur: 'GoGo IA',     emoji: '☀️' },
+  { heure_debut: 17, heure_fin: 19, nom: 'Drive Time',          animateur: 'DJ Cobra',    emoji: '🚗' },
+  { heure_debut: 19, heure_fin: 20, nom: 'Flash Actu Soir',     animateur: 'Journaliste', emoji: '📡' },
+  { heure_debut: 20, heure_fin: 22, nom: 'Grand Débat',         animateur: 'LHD',         emoji: '🗣️' },
+  { heure_debut: 22, heure_fin: 24, nom: 'Night Mix',           animateur: 'GoGo IA',     emoji: '🌙' },
+  { heure_debut: 0,  heure_fin: 6,  nom: 'Late Night Vibes',    animateur: 'GoGo IA',     emoji: '⭐' },
+];
+
+// Émission spéciale samedi 20H
+const SPECIAL_SHOWS = [
+  { jour: 6, heure_debut: 20, heure_fin: 23, nom: 'Le Maître des Énigmes', animateur: 'LHD', emoji: '🧠' }
+];
+
+function getCurrentShow() {
+  const now = new Date();
+  const heure = now.getHours();
+  const jour = now.getDay(); // 0=Dim, 6=Sam
+
+  // Vérifier émissions spéciales
+  for (const show of SPECIAL_SHOWS) {
+    if (jour === show.jour && heure >= show.heure_debut && heure < show.heure_fin) {
+      return show;
+    }
+  }
+
+  // Émissions normales
+  for (const show of SHOWS) {
+    if (heure >= show.heure_debut && heure < show.heure_fin) {
+      return show;
+    }
+  }
+
+  return { nom: 'GOGO FM Live', animateur: 'GoGo IA', emoji: '🎙️' };
+}
+
+// Titres de chansons simulés par heure
+const TITRES = {
+  matin: [
+    { titre: 'Ye', artiste: 'Burna Boy' },
+    { titre: 'Asake', artiste: 'Joha' },
+    { titre: 'Accumulation', artiste: 'Serge Beynaud' },
+    { titre: 'Panapana', artiste: 'Harmonize' },
+    { titre: 'Positif', artiste: 'Sidiki Diabaté' },
+  ],
+  apres_midi: [
+    { titre: 'Essence', artiste: 'Wizkid ft. Tems' },
+    { titre: 'Love Damini', artiste: 'Burna Boy' },
+    { titre: 'Sugarcane', artiste: 'Camidoh' },
+    { titre: 'Joeboy', artiste: 'Contour' },
+    { titre: 'Buga', artiste: 'Kizz Daniel' },
+  ],
+  soir: [
+    { titre: 'True Love', artiste: 'Davido' },
+    { titre: 'Stand Strong', artiste: 'Don Jazzy' },
+    { titre: 'Kilometer', artiste: 'Mr Eazi' },
+    { titre: 'Currency', artiste: 'Olamide' },
+    { titre: 'Fvck Our Feelings', artiste: 'Rema' },
+  ],
+  nuit: [
+    { titre: 'Calm Down', artiste: 'Rema' },
+    { titre: 'Peru', artiste: 'Fireboy DML' },
+    { titre: 'Mood', artiste: 'Wande Coal' },
+    { titre: 'Bank On It', artiste: 'Beyoncé' },
+    { titre: 'Soso', artiste: 'Omah Lay' },
+  ]
+};
+
+function getCurrentTrack() {
+  const heure = new Date().getHours();
+  let categorie = 'nuit';
+  if (heure >= 6 && heure < 12) categorie = 'matin';
+  else if (heure >= 12 && heure < 18) categorie = 'apres_midi';
+  else if (heure >= 18 && heure < 23) categorie = 'soir';
+
+  const titres = TITRES[categorie];
+  const idx = Math.floor(Date.now() / 180000) % titres.length; // Change toutes les 3 min
+  return titres[idx];
+}
+
+function updatePlayerInfo() {
+  const show = getCurrentShow();
+  const track = getCurrentTrack();
+
+  // Mettre à jour le nom de la piste
+  const trackName = document.getElementById('track-name');
+  if (trackName) {
+    trackName.innerHTML = `
+      <img src="images/logo_3D.png" alt="GOGO FM"
+        style="height:18px;object-fit:contain;border-radius:50%"/>
+      ${show.emoji} ${track.titre}
+    `;
+  }
+
+  // Mettre à jour l'émission
+  const showName = document.getElementById('show-name');
+  if (showName) {
+    showName.innerHTML = `
+      <span style="color:var(--gold);font-weight:600">${track.artiste}</span>
+      <span style="color:rgba(255,255,255,0.3);margin:0 4px">•</span>
+      ${show.nom} avec ${show.animateur}
+    `;
+  }
+}
+
+// Mettre à jour toutes les 30 secondes
+function startPlayerInfoUpdate() {
+  updatePlayerInfo();
+  setInterval(updatePlayerInfo, 30000);
+}
+
+
+
 
 // ─── PARTAGER ────────────────────────────────────────────────
 function partager() {
